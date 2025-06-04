@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Template Page - The Sith Brotherhood</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+    <main>
+      <h1 class="title">Template Page Title</h1>
+
+      <!-- Example image -->
+      <div style="text-align: center; margin: 2rem 0;">
+        <img src="media/MainGroup_LOGO.png" alt="Brotherhood Logo" style="max-width: 300px; height: auto; border-radius: 10px;">
+      </div>
+
+      <section>
+        <!-- Example of sithcode class (centered text) -->
+        <p class="sithcode">
+          This is an example of the sithcode class. Text is centered and styled for emphasis. Use this for important quotes, codes, or ceremonial text that should stand out prominently on the page.
+        </p>
+
+        <!-- Example of description class (left-aligned text) -->
+        <h2>Example Section Header</h2>
+        <p class="description">
+          This is an example of the description class. Text is left-aligned and used for regular content paragraphs. This class provides good readability for longer blocks of text and detailed explanations.
+        </p>
+
+        <!-- Example with bold text -->
+        <p class="description">
+          <strong>Bold text example:</strong> You can use the strong tag or &lt;b&gt; tag to make text <b>bold</b> within any class.
+        </p>
+
+        <!-- Example with line breaks -->
+        <p class="description">
+          Example with line breaks:<br/>
+          Line one<br/>
+          Line two<br/>
+          Line three
+        </p>
+
+        <!-- Example with links -->
+        <p class="description">
+          <a href="lore.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Example link to another page</a>
+        </p>
+
+        <!-- Example of multiple images -->
+        <h2>Multiple Images Example</h2>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0;">
+          <img src="media/DC_LOGO.png" alt="Dark Council" style="max-width: 150px; height: auto; border-radius: 5px;">
+          <img src="media/DHG_LOGO.png" alt="Dark Honor Guard" style="max-width: 150px; height: auto; border-radius: 5px;">
+          <img src="media/REV_LOGO.png" alt="Reavers" style="max-width: 150px; height: auto; border-radius: 5px;">
+        </div>
+
+        <!-- Example of styled content blocks -->
+        <h2>Styled Content Block</h2>
+        <div style="background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 10px; margin: 2rem 0; border: 1px solid #ff6b6b;">
+          <p class="description">
+            This is an example of a styled content block with a semi-transparent background, padding, and colored border. Useful for highlighting important information or creating visual separation.
+          </p>
+        </div>
+
+        <!-- Example of lists -->
+        <h2>List Examples</h2>
+        <p class="description">
+          Unordered list example:
+        </p>
+        <ul style="color: white; font-size: 1.2rem; margin-left: 2rem;">
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+        </ul>
+
+        <p class="description">
+          Ordered list example:
+        </p>
+        <ol style="color: white; font-size: 1.2rem; margin-left: 2rem;">
+          <li>First step</li>
+          <li>Second step</li>
+          <li>Third step</li>
+        </ol>
+
+        <!-- Example of code block -->
+        <h2>Code Example</h2>
+        <p class="description">
+          Example of code formatting:
+        </p>
+        <pre class="code" style="color: black; background: #fafafa;">
+function example() {
+  console.log("This is code formatting");
+}
+        </pre>
+
+        <!-- Example of different heading levels -->
+        <h2>Heading Level 2</h2>
+        <h3 style="color: #ff6b6b; margin: 1rem 0;">Heading Level 3</h3>
+        <h4 style="color: #ff9999; margin: 1rem 0;">Heading Level 4</h4>
+
+        <!-- Example of card-like styling -->
+        <h2>Card-Style Content</h2>
+        <div class="card" style="max-width: 100%; background: rgba(0,0,0,0.2);">
+          <h2>Card Title</h2>
+          <p>This is an example of card-style content using the card class. Good for organizing related information into distinct sections.</p>
+        </div>
+
+        <!-- Example of grid layout -->
+        <h2>Grid Layout Example</h2>
+        <div class="grid">
+          <div class="card">
+            <h2>Card 1</h2>
+            <p>First card in grid layout</p>
+          </div>
+          <div class="card">
+            <h2>Card 2</h2>
+            <p>Second card in grid layout</p>
+          </div>
+        </div>
+
+        <!-- Example of special formatting -->
+        <p class="sithcode" style="font-style: italic; color: #ff6b6b;">
+          "Example of italic, colored text using sithcode class for dramatic effect"
+        </p>
+
+        <!-- Example of inline styling combinations -->
+        <p class="description">
+          This paragraph shows <span style="color: #ff6b6b;">colored text</span>, 
+          <span style="background: rgba(255,107,107,0.2); padding: 2px 5px; border-radius: 3px;">highlighted text</span>, 
+          and <span style="font-size: 1.8rem;">larger text</span> within a description paragraph.
+        </p>
+
+        <!-- Background customization instructions -->
+        <h2>Custom Page Backgrounds</h2>
+        <p class="description">
+          To change the background image for any page, modify the body tag's style attribute:<br/>
+          <code>&lt;body class="page-background" style="background-image: url('media/YOUR_IMAGE.png');"&gt;</code><br/><br/>
+          Available images in the media folder: MainGroup_LOGO.png, DC_LOGO.png, DHG_LOGO.png, DM_LOGO.png, II_LOGO.png, IQ_LOGO.png, REV_LOGO.png
+        </p>
+      </section>
+
+      <!-- Navigation back to main page -->
+      <div style="margin-top: 3rem">
+        <a
+          href="index.html"
+          style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline"
+          >← Return to Main Page</a
+        >
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

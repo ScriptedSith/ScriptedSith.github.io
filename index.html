@@ -1,0 +1,80 @@
+<!--
+  Hit RUN to see this project in action!
+  
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>The Sith Brotherhood</title>
+    <link rel="icon" type="image/x-icon" href="media/TSB.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
+    <div id="navbar-container"></div>
+
+    <script src="navbar.js"></script>
+    <script>
+      // Set the active page - change this variable to set which nav item is active
+      const ACTIVE = 'Home';
+
+      // Insert the navbar into the page
+      document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    </script>
+    
+    
+
+    <main>
+      <p></p>
+      <p></p>
+      <p></p>
+      <h1 class="title">〔The Sith Brotherhood〕</h1>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p class="sithcode">
+        The Sith Brotherhood was a sect of Force-sensitives who utilized the
+        dark side of the Force. The Sith were the most infamous of all dark side
+        practices, and the members of the order were often seen as the pinnacle
+        of power within the dark side. A force not to challenge, forged from
+        militarism and fueled by the almighty power of the dark side of the
+        Force. United by the supreme master, the Emperor and the Dark Council.
+      </p>
+
+      <p class="sithcode">
+        Peace is a lie, there is only passion.<br />Through passion, I gain
+        strength.<br />Through strength, I gain power.<br />Through power, I
+        gain victory.<br />Through victory, my chains are broken.<br />The Force
+        shall free me.
+      </p>
+
+      <section class="grid">
+        <a href="Lore/lore.html" class="card">
+          <h2>Group Lore &rarr;</h2>
+          <p>Read all about the lore within the group.</p>
+        </a>
+
+        <a href="Holocron/holocron.html" class="card">
+          <h2>Holocron &rarr;</h2>
+          <p>Read all about the lore of Star Wars.</p>
+        </a>
+
+        <a href="Guides/guides.html" class="card">
+          <h2>Guides &rarr;</h2>
+          <p>Read guides about how the group operates.</p>
+        </a>
+
+        <a href="Divisions/divisions.html" class="card">
+          <h2>Divisions &rarr;</h2>
+          <p>Read about all the divisions within the group.</p>
+        </a>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
