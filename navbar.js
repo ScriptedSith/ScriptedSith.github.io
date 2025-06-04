@@ -39,19 +39,19 @@ function createNavbar(ACTIVE = "Home") {
               <div class="dropdown-item">
                 <a class="dropdown-link has-submenu">Planet History</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a class="dropdown-link has-submenu">Battles</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a class="dropdown-link has-submenu">Weapons</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
@@ -69,7 +69,7 @@ function createNavbar(ACTIVE = "Home") {
               <div class="dropdown-item">
                 <a class="dropdown-link has-submenu">Other</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
             </div>
