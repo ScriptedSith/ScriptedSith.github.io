@@ -1,70 +1,70 @@
-
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Guides - The Sith Brotherhood</title>
-    <link rel="icon" type="image/x-icon" href="media/TSB.png">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
-    
-    <!-- Navigation Bar -->
-    <div id="navbar-container"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Guides - The Sith Brotherhood</title>
+  <link rel="icon" type="image/x-icon" href="media/TSB.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
 
-    <script src="navbar.js"></script>
-    <script>
-      // Set the active page - change this variable to set which nav item is active
-      const ACTIVE = 'Guides';
+<body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
 
-      // Insert the navbar into the page
-      document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
-    </script>
-    
-    <main>
-      <h1 class="title">Guides</h1>
+  <!-- Navigation Bar -->
+  <div id="navbar-container"></div>
 
-      <section>
-        <h2>Brotherhood Guides and Resources</h2>
-        <p class="description">
-          Welcome to the comprehensive guide section of the Sith Brotherhood. Here you will find essential information about our policies, hosting procedures, ranking system, and tactical formations. These guides serve as the foundation for all Brotherhood operations and activities.
-        </p>
-      </section>
-      <section>
-        <div class="grid">
-          <a href="sith-imperial-policy.html" class="card">
-            <h2>Sith Imperial Policy &rarr;</h2>
-            <p>Official policies and regulations governing the Brotherhood.</p>
-          </a>
+  <script src="navbar.js"></script>
+  <script>
+    // Set the active page - change this variable to set which nav item is active
+    const ACTIVE = 'Guides';
 
-          <a href="hosting.html" class="card">
-            <h2>Hosting Guide &rarr;</h2>
-            <p>Complete guide for hosting events, trainings, and trials.</p>
-          </a>
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+  </script>
 
-          <a href="ranks.html" class="card">
-            <h2>Ranks &rarr;</h2>
-            <p>Detailed breakdown of the Brotherhood's ranking system.</p>
-          </a>
+  <main>
+    <h1 class="title">Guides</h1>
 
-          <a href="commands-formations.html" class="card">
-            <h2>Commands and Formations &rarr;</h2>
-            <p>Military commands and tactical formations used by the Brotherhood.</p>
-          </a>
-        </div>
-      </section>
+    <section>
+      <h2>Brotherhood Guides and Resources</h2>
+      <p class="description">
+        Welcome to the comprehensive guide section of the Sith Brotherhood. Here you will find essential information
+        about our policies, hosting procedures, ranking system, and tactical formations. These guides serve as the
+        foundation for all Brotherhood operations and activities.
+      </p>
+    </section>
+    <section>
+      <div class="grid">
+        <a href="sith-imperial-policy.html" class="card">
+          <h2>Sith Imperial Policy &rarr;</h2>
+          <p>Official policies and regulations governing the Brotherhood.</p>
+        </a>
 
-      <div style="margin-top: 3rem">
-        <a
-          href="index.html"
-          style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline"
-          >← Return to Main Page</a
-        >
+        <a href="hosting.html" class="card">
+          <h2>Hosting Guide &rarr;</h2>
+          <p>Complete guide for hosting events, trainings, and trials.</p>
+        </a>
+
+        <a href="ranks.html" class="card">
+          <h2>Ranks &rarr;</h2>
+          <p>Detailed breakdown of the Brotherhood's ranking system.</p>
+        </a>
+
+        <a href="commands-formations.html" class="card">
+          <h2>Commands and Formations &rarr;</h2>
+          <p>Military commands and tactical formations used by the Brotherhood.</p>
+        </a>
       </div>
-    </main>
+    </section>
 
-    <script type="module" src="script.js"></script>
-  </body>
+    <div style="margin-top: 3rem">
+      <a href="index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+        Page</a>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+
 </html>
