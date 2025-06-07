@@ -39,19 +39,19 @@ function createNavbar(ACTIVE = 'Home') {
               <div class="dropdown-item">
                 <a href="planets.html" class="dropdown-link has-submenu">Planet History</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a href="battles.html" class="dropdown-link has-submenu">Battles</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a href="weapon.html" class="dropdown-link has-submenu">Weapons</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
@@ -64,20 +64,20 @@ function createNavbar(ACTIVE = 'Home') {
                   <a href="DarthNihilus.html" class="sub-dropdown-link">Darth Nihilus</a>
                   <a href="AjuntaPall.html" class="sub-dropdown-link">Ajunta Pall</a>
                   <a href="DarthVitiate.html" class="sub-dropdown-link">Darth Vitiate</a>
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a href="times.html" class="dropdown-link has-submenu">Section of Time</a>
                 <div class="sub-dropdown">
                   <a href="HundredYearDarkness.html" class="sub-dropdown-link">Hundred Year Darkness</a>
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a href="other.html" class="dropdown-link has-submenu">Other</a>
                 <div class="sub-dropdown">
-                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
+                  <a href="https://discord.gg/73bKC82aEs" class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
             </div>
