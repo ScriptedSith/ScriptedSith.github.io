@@ -58,30 +58,20 @@ function createNavbar(ACTIVE = 'Home') {
                 <a href="people.html" class="dropdown-link has-submenu">People</a>
                 <div class="sub-dropdown">
                   <a href="KingAdas.html" class="sub-dropdown-link">King Adas</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="MarkaRagnos.html" class="sub-dropdown-link">Marka Ragnos</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="NagaSadow.html" class="sub-dropdown-link">Naga Sadow</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="TulakHord.html" class="sub-dropdown-link">Tulak Hord</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="DarthNihilus.html" class="sub-dropdown-link">Darth Nihilus</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="AjuntaPall.html" class="sub-dropdown-link">Ajunta Pall</a>
-                </div>
-                <div class="sub-dropdown">
                   <a href="DarthVitiate.html" class="sub-dropdown-link">Darth Vitiate</a>
+                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
                 <a href="times.html" class="dropdown-link has-submenu">Section of Time</a>
                 <div class="sub-dropdown">
                   <a href="HundredYearDarkness.html" class="sub-dropdown-link">Hundred Year Darkness</a>
+                  <a class="sub-dropdown-link">Suggest some in the discord.</a>
                 </div>
               </div>
               <div class="dropdown-item">
