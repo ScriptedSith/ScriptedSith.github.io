@@ -11,6 +11,7 @@ function createNavbar(ACTIVE = 'Home') {
           <li class="nav-item">
             <a href="lore.html" class="nav-link${ACTIVE === 'Group Lore' ? ' active' : ''}">Group Lore</a>
             <div class="dropdown">
+              <a href="group.html" class="dropdown-link">Group</a>
               <a href="dark-council.html" class="dropdown-link">Dark Council</a>
               <a href="powerbase.html" class="dropdown-link">Powerbase</a>
             </div>
