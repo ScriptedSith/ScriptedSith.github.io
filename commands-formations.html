@@ -1,140 +1,65 @@
-
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Commands and Formations - The Sith Brotherhood</title>
-    <link rel="icon" type="image/x-icon" href="media/TSB.png">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <style>
-      .carousel {
-        max-width: 800px;
-        overflow: hidden;
-        position: relative;
-        background-color: black;
-        margin: 0 auto;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Commands and Formations - The Sith Brotherhood</title>
+  <link rel="icon" type="image/x-icon" href="media/TSB.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
 
-      .carousel-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
+<body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
+  <!-- Navigation Bar -->
+  <div id="navbar-container"></div>
 
-      .carousel-slide {
-        min-width: 100%;
-        box-sizing: border-box;
-      }
+  <script src="navbar.js"></script>
+  <script>
+    // Set the active page - change this variable to set which nav item is active
+    const ACTIVE = 'Guides';
 
-      .carousel-slide img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.7);
-        border: none;
-        font-size: 18px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
-      }
-
-      .carousel-btn.prev {
-        left: 10px;
-      }
-
-      .carousel-btn.next {
-        right: 10px;
-      }
-
-      .carousel-btn:hover {
-        background: rgba(255, 255, 255, 1);
-      }
-
-      .carousel-dots {
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .dot {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .dot.active,
-      .dot:hover {
-        background-color: #717171;
-      }
-    </style>
-  </head>
-
-  <body class="page-background" style="background-image: url('media/MainGroup_LOGO.png');">
-    <!-- Navigation Bar -->
-    <div id="navbar-container"></div>
-
-    <script src="navbar.js"></script>
-    <script>
-      // Set the active page - change this variable to set which nav item is active
-      const ACTIVE = 'Guides';
-
-      // Insert the navbar into the page
-      document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
-    </script>
-
-    <main>
-      <section>
-        <h1 class="title">Commands</h1>
-      </section>
-      <p></p>
-      <section>
-        <p class="description">
-          <b>R:</b> Reply<br>
-          <b>FE:</b> Formation Expand<br>
-          <b>FC:</b> Formation Contract<br>
-          <b>IF:</b> Inverse Formation<br>
-          <b>E:</b> Execute<br>
-          <b>A:</b> Arm<br>
-          <b>I:</b> Ignite<br>
-          <b>UA:</b> Unarm<br>
-          <b>DI:</b> Disignite<br>
-          <b>RE:</b> Reform<br>
-          <b>PB:</b> Push Back<br>
-          <b>WA:</b> Warning<br>
-          <b>H:</b> Hunt<br>
-          <b>P:</b> Patrol<br>
-          <b>LD:</b> Lockdown<br>
-          <b>KR:</b> Kill Radius<br>
-          <b>TU:</b> Tighten Up<br>
-          <b>SO:</b> Spread Out<br>
-          <b>CS:</b> Combat Spread<br>
-          <b>DIS:</b> Disperse, run like the wind.<br>
-          <b>KZ:</b> Killzone<br>
-          <b>C:</b> Cancel<br>
-          <b>HA:</b> Halt<br>
-          <b>ST:</b> Stalk<br>
-          <b>G:</b> Guard<br>
-          <b>FB:</b> Fall Back<br>
-          <b>J:</b> Jump<br>
-        </p>
-      </section>
-
-      <section>
-        <h1 class="title">Formations</h1>
-      </section>
-
-      <section>
-        <div class="carousel">
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+  </script>
+  
+  <main>
+    <section>
+      <h1 class="title">Commands</h1>
+    </section>
+    <p></p>
+    <section>
+      <p class="description">
+        <b>R:</b> Reply<br>
+        <b>FE:</b> Formation Expand<br>
+        <b>FC:</b> Formation Contract<br>
+        <b>IF:</b> Inverse Formation<br>
+        <b>E:</b> Execute<br>
+        <b>A:</b> Arm<br>
+        <b>I:</b> Ignite<br>
+        <b>UA:</b> Unarm<br>
+        <b>DI:</b> Disignite<br>
+        <b>RE:</b> Reform<br>
+        <b>PB:</b> Push Back<br>
+        <b>WA:</b> Warning<br>
+        <b>H:</b> Hunt<br>
+        <b>P:</b> Patrol<br>
+        <b>LD:</b> Lockdown<br>
+        <b>KR:</b> Kill Radius<br>
+        <b>TU:</b> Tighten Up<br>
+        <b>SO:</b> Spread Out<br>
+        <b>CS:</b> Combat Spread<br>
+        <b>DIS:</b> Disperse, run like the wind.<br>
+        <b>KZ:</b> Killzone<br>
+        <b>C:</b> Cancel<br>
+        <b>HA:</b> Halt<br>
+        <b>ST:</b> Stalk<br>
+        <b>G:</b> Guard<br>
+        <b>FB:</b> Fall Back<br>
+        <b>J:</b> Jump<br>
+      </p>
+    </section>
+    <section>
+      
+      <div class="carousel">
         <div class="carousel-container">
           <div class="carousel-item">
             <h3><b>B:</b> Box</h3>
@@ -185,69 +110,95 @@
             <img src="media/S.png" alt="Image 1">
           </div>
         </div>
-
-          <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-          <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
-        </div>
-
-        <div class="carousel-dots" id="carouselDots"></div>
-      </section>
-
-      <div style="margin-top: 3rem">
-        <a
-          href="guides.html"
-          style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline"
-          >← Return to Guides</a
-        >
+        <button class="carousel-button prev">Prev</button>
+        <button class="carousel-button next">Next</button>
       </div>
-    </main>
 
-    <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.carousel-slide');
-      const totalSlides = slides.length;
-
-      // Create dots
-      const dotsContainer = document.getElementById('carouselDots');
-      for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('span');
-        dot.className = 'dot';
-        if (i === 0) dot.classList.add('active');
-        dot.onclick = () => goToSlide(i);
-        dotsContainer.appendChild(dot);
-      }
-
-      function updateCarousel() {
-        const container = document.getElementById('carouselContainer');
-        container.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update dots
-        document.querySelectorAll('.dot').forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentSlide);
-        });
-      }
-
-      function changeSlide(direction) {
-        currentSlide += direction;
-        if (currentSlide < 0) {
-          currentSlide = totalSlides - 1;
-        } else if (currentSlide >= totalSlides) {
-          currentSlide = 0;
+      <style>
+        .carousel {
+          width: 266px;
+          overflow: hidden;
+          position: relative;
+          background-color: black;
         }
-        updateCarousel();
-      }
 
-      function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
-      }
+        .carousel-container {
+          display: flex;
+          transition: transform 0.3s ease-in-out;
+          width: 266px;
+          overflow: shown;
+        }
 
-      // Auto-advance carousel every 5 seconds
-      setInterval(() => {
-        changeSlide(1);
-      }, 5000);
-    </script>
+        .carousel-item {
+          width: 256px;
+          flex-shrink: 0;
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #ccc;
+          margin: 5px;
+          box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
 
-    <script type="module" src="script.js"></script>
-  </body>
+        .carousel-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #333;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          opacity: 0.7;
+        }
+
+        .carousel-button:hover {
+          opacity: 1;
+        }
+
+        .prev {
+          left: 0;
+        }
+
+        .next {
+          right: 0;
+        }
+      </style>
+
+      <script>
+        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+
+        let counter = 0;
+        const itemWidth = document.querySelector('.carousel-item').offsetWidth; // Get the width of a carousel item
+
+        carouselContainer.style.width = `${itemWidth}px`;
+
+        nextButton.addEventListener('click', () => {
+          counter++;
+          if (counter >= carouselItems.length) {
+            counter = 0; // Wrap around to the beginning
+          }
+          carouselContainer.style.transform = `translateX(${-266 * counter}px)`;
+        });
+
+        prevButton.addEventListener('click', () => {
+          counter--;
+          if (counter < 0) {
+            counter = carouselItems.length - 1; // Wrap around to the end
+          }
+          carouselContainer.style.transform = `translateX(${-266 * counter}px)`;
+        });
+      </script>
+    </section>
+    <div style="margin-top: 3rem">
+      <a
+        href="guides.html"
+        style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline"
+        >← Return to Guide</a
+      >
+    </div>
+  </main>
+</body>
 </html>
