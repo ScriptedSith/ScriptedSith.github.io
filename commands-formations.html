@@ -20,7 +20,7 @@
     // Insert the navbar into the page
     document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
   </script>
-  
+
   <main>
     <section>
       <h1 class="title">Commands</h1>
@@ -58,7 +58,7 @@
       </p>
     </section>
     <section>
-      
+
       <div class="carousel">
         <div class="carousel-container">
           <div class="carousel-item">
@@ -116,21 +116,22 @@
 
       <style>
         .carousel {
-          width: 266px;
+          width: 1034px;
           overflow: hidden;
           position: relative;
           background-color: black;
+          margin: 0 auto;
         }
 
         .carousel-container {
           display: flex;
           transition: transform 0.3s ease-in-out;
-          width: 266px;
+          width: 1024px;
           overflow: shown;
         }
 
         .carousel-item {
-          width: 256px;
+          width: 1024px;
           flex-shrink: 0;
           text-align: center;
           padding: 20px;
@@ -180,7 +181,7 @@
           if (counter >= carouselItems.length) {
             counter = 0; // Wrap around to the beginning
           }
-          carouselContainer.style.transform = `translateX(${-266 * counter}px)`;
+          carouselContainer.style.transform = `translateX(${-1034 * counter}px)`;
         });
 
         prevButton.addEventListener('click', () => {
@@ -188,7 +189,7 @@
           if (counter < 0) {
             counter = carouselItems.length - 1; // Wrap around to the end
           }
-          carouselContainer.style.transform = `translateX(${-266 * counter}px)`;
+          carouselContainer.style.transform = `translateX(${-1034 * counter}px)`;
         });
       </script>
     </section>
