@@ -91,7 +91,6 @@ function createNavbar(ACTIVE = 'Home') {
                 <a href="ii.html" class="dropdown-link">Imperial Intelligence</a>
                 <a href="rev.html" class="dropdown-link">Reavers</a>
                 <a href="dm.html" class="dropdown-link">Dread Masters</a>
-                <a href="dd.html" class="dropdown-link">Diplomatic Department</a>
              </div>
           </li>
           <li class="nav-item">
