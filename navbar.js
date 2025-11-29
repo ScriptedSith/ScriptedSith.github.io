@@ -21,7 +21,7 @@ function createNavbar(ACTIVE = 'Home') {
             <div class="dropdown">
               <a href="sith-imperial-policy.html" class="dropdown-link">Sith Imperial Policy</a>
               <div class="dropdown-item">
-                <a href="hosting-guide.html" class="dropdown-link has-submenu">Hosting Guide</a>
+                <a href="hosting.html" class="dropdown-link has-submenu">Hosting Guide</a>
                 <div class="sub-dropdown">
                   <a href="hosting-events.html" class="sub-dropdown-link">Events</a>
                   <a href="hosting-trainings.html" class="sub-dropdown-link">Trainings</a>
