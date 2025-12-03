@@ -16,7 +16,10 @@
   <script src="../../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -24,20 +27,20 @@
     <p></p>
     <p></p>
     <section class="grid">
-      <a href="events/index.html" class="card">
+      <a href="events/" class="card">
         <h2>Events</h2>
       </a>
 
-      <a href="trainings/index.html" class="card">
+      <a href="trainings/" class="card">
         <h2>Trainings &rarr;</h2>
       </a>
 
-      <a href="trials/index.html" class="card">
+      <a href="trials/" class="card">
         <h2>Trials &rarr;</h2>
       </a>
     </section>
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Guides</a>
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Guides</a>
     </div>
   </main>
 </body>

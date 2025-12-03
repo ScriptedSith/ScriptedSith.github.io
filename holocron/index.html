@@ -17,7 +17,10 @@
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Holocron';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -31,39 +34,39 @@
       </p>
     </section>
     <section class="grid">
-      <a href="planets/index.html" class="card">
+      <a href="planets/" class="card">
         <h2>Planets &rarr;</h2>
         <p>Read all about the different planets in the Star Wars universe.</p>
       </a>
 
-      <a href="battles/index.html" class="card">
+      <a href="battles/" class="card">
         <h2>Battles &rarr;</h2>
         <p>Read about all the major battles in the Star Wars universe.</p>
       </a>
 
-      <a href="weapons/index.html" class="card">
+      <a href="weapons/" class="card">
         <h2>Weapons &rarr;</h2>
         <p>Read about famous weapons in the Star Wars universe.</p>
       </a>
 
-      <a href="people/index.html" class="card">
+      <a href="people/" class="card">
         <h2>People &rarr;</h2>
         <p>Read about famous people in the Star Wars universe.</p>
       </a>
 
-      <a href="times/index.html" class="card">
+      <a href="times/" class="card">
         <h2>Time &rarr;</h2>
         <p>Read about import sections of time in Star Wars.</p>
       </a>
 
-      <a href="other/index.html" class="card">
+      <a href="other/" class="card">
         <h2>Other &rarr;</h2>
         <p>Read about other important things from Star Wars.</p>
       </a>
     </section>
 
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
         Page</a>
     </div>
   </main>

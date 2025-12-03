@@ -17,7 +17,10 @@
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -32,29 +35,29 @@
       </p>
     </section>
     <section class="grid">
-        <a href="sith-imperial-policy/index.html" class="card">
+        <a href="sith-imperial-policy/" class="card">
           <h2>Sith Imperial Policy &rarr;</h2>
           <p>Official policies and regulations governing the Brotherhood.</p>
         </a>
 
-        <a href="hosting/index.html" class="card">
+        <a href="hosting/" class="card">
           <h2>Hosting Guide &rarr;</h2>
           <p>Complete guide for hosting events, trainings, and trials.</p>
         </a>
 
-        <a href="ranks/index.html" class="card">
+        <a href="ranks/" class="card">
           <h2>Ranks &rarr;</h2>
           <p>Detailed breakdown of the Brotherhood's ranking system.</p>
         </a>
 
-        <a href="commands-formations/index.html" class="card">
+        <a href="commands-formations/" class="card">
           <h2>Commands and Formations &rarr;</h2>
           <p>Military commands and tactical formations used by the Brotherhood.</p>
         </a>
     </section>
 
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
         Page</a>
     </div>
   </main>

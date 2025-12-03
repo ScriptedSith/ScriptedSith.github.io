@@ -16,7 +16,10 @@
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Links';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -43,7 +46,7 @@
     
     </section>
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
         Page</a>
     </div>
   </main>

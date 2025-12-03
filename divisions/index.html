@@ -16,7 +16,10 @@
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Divisions';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -30,26 +33,26 @@
     </section>
     <section>
       <div class="grid2">
-        <a href="dhg/index.html" class="cardDHG">
+        <a href="dhg/" class="cardDHG">
           <img src="../media/TSB_DHG.png" alt="Dark Honor Guard">
         </a>
-        <a href="iq/index.html" class="cardIQ">
+        <a href="iq/" class="cardIQ">
           <img src="../media/TSB_IQ.png" alt="Inquisitors">
         </a>
-        <a href="ii/index.html" class="cardII">
+        <a href="ii/" class="cardII">
           <img src="../media/TSB_II.png" alt="Imperial Intelligence">
         </a>
-        <a href="rev/index.html" class="cardREV">
+        <a href="rev/" class="cardREV">
           <img src="../media/TSB_REV.png" alt="Reavers">
         </a>
-        <a href="dm/index.html" class="cardDM">
+        <a href="dm/" class="cardDM">
           <img src="../media/TSB_DM.png" alt="Dread Masters">
         </a>
       </div>
     </section>
 
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
         Page</a>
     </div>
   </main>

@@ -18,9 +18,10 @@
   <script>
     // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Holocron';
+    const FinalPath = '../../'
 
     // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -36,7 +37,7 @@
     </section>
 
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Holocron</a>
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Holocron</a>
     </div>
   </main>
 

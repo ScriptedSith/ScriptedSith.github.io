@@ -17,7 +17,10 @@
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Group Lore';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    const FinalPath = '../'
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
   </script>
 
   <main>
@@ -31,7 +34,7 @@
         Brotherhood's history is crucial for appreciating its current structure and operations.
       </p>
       <p class="description">
-        <a href="group/index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Dive into the
+        <a href="group/" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Dive into the
           Group</a>
       </p>
 
@@ -42,7 +45,7 @@
         All together, they form a balance of power beneath the Emperor, ensuring his vision is executed flawlessly.
       </p>
       <p class="description">
-        <a href="dark-council/index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Learn more
+        <a href="dark-council/" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Learn more
           about the Dark Council</a>
       </p>
 
@@ -60,13 +63,13 @@
         tightly knit hierarchy of authority that keeps the Brotherhood in perfect order.
       </p>
       <p class="description">
-        <a href="powerbase/index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Explore the
+        <a href="powerbase/" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline;">→ Explore the
           Brotherhood's Powerbase</a>
       </p>
     </section>
 
     <div style="margin-top: 3rem">
-      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
+      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
         Page</a>
     </div>
   </main>

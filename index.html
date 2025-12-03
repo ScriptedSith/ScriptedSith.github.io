@@ -16,9 +16,10 @@
     <script>
       // Set the active page - change this variable to set which nav item is active
       const ACTIVE = 'Home';
+    const FinalPath = ''
 
-      // Insert the navbar into the page
-      document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
     </script>
 
     <main>
@@ -45,22 +46,22 @@
       </p>
 
       <section class="grid">
-        <a href="lore/index.html" class="card">
+        <a href="lore/" class="card">
           <h2>Group Lore &rarr;</h2>
           <p>Read all about the lore within the group.</p>
         </a>
 
-        <a href="holocron/index.html" class="card">
+        <a href="holocron/" class="card">
           <h2>Holocron &rarr;</h2>
           <p>Read all about the lore of Star Wars.</p>
         </a>
 
-        <a href="guides/index.html" class="card">
+        <a href="guides/" class="card">
           <h2>Guides &rarr;</h2>
           <p>Read guides about how the group operates.</p>
         </a>
 
-        <a href="divisions/index.html" class="card">
+        <a href="divisions/" class="card">
           <h2>Divisions &rarr;</h2>
           <p>Read about all the divisions within the group.</p>
         </a>
