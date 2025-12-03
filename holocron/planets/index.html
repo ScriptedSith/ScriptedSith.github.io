@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Planets - The Sith Brotherhood</title>
+  <link rel="icon" type="image/x-icon" href="../../media/TSB.png">
+  <link href="../../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png');">
+
+  <!-- Navigation Bar -->
+  <div id="navbar-container"></div>
+
+  <script src="../../navbar.js"></script>
+  <script>
+    // Set the active page - change this variable to set which nav item is active
+    const ACTIVE = 'Holocron';
+
+    // Insert the navbar into the page
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE);
+  </script>
+
+  <main>
+    <h1 class="title">Planets</h1>
+
+    <section>
+      <p class="description">
+        Welcome to the Planet Section of the Sith Holocron.<br>Here you will discover vital information about the key worlds tied to the Sith Brotherhood. From ancient strongholds to battlegrounds steeped in dark power, these planets form the crucible of our legacy and strength. Understanding these places is essential to grasping the full might and history of the Sith.
+      </p>
+    </section>
+    <section>
+      <h2>WIP</h2>
+    </section>
+
+    <div style="margin-top: 3rem">
+      <a href="../index.html" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Holocron</a>
+    </div>
+  </main>
+
+  <script type="module" src="../../script.js"></script>
+</body>
+
+</html>
+
+
