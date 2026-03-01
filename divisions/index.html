@@ -3,57 +3,148 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divisions - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../media/TSB.png">
   <link href="../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .divisions-container {
+      max-width: 1100px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+    }
+
+    .section-header {
+      color: #ff3333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* Divisions Grid */
+    .grid-divisions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+      justify-items: center;
+    }
+
+    .div-card {
+      transition: all 0.3s ease;
+      position: relative;
+      display: block;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .div-card img {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .div-card:hover {
+      background: rgba(255, 0, 0, 0.1);
+      border-color: rgba(255, 0, 0, 0.4);
+      transform: translateY(-10px);
+    }
+
+    .div-card:hover img {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.6));
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Divisions';
-    const FinalPath = '../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Divisions</h1>
-    <section>
+  <main class="divisions-container">
+    <h1 class="title">Imperial Sectors</h1>
+
+    <section class="glass-panel">
+      <h2 class="section-header">Specialized Branches</h2>
       <p class="description">
-        Welcome to the comprehensive guide section of the Sith Brotherhood. Here you will find essential information
-        about our policies, hosting procedures, ranking system, and tactical formations. These guides serve as the
-        foundation for all Brotherhood operations and activities.
+        The Sith Brotherhood is composed of elite sub-factions, each serving a vital role in the preservation 
+        of our Empire. From the silent shadows of Intelligence to the unwavering steel of the Honor Guard, 
+        select a division to view their purpose and entry requirements.
       </p>
-    </section>
-    <section>
-      <div class="grid2">
-        <a href="dhg/" class="cardDHG">
+
+      <div class="grid-divisions">
+        <a href="dhg/" class="div-card">
           <img src="../media/TSB_DHG.png" alt="Dark Honor Guard">
         </a>
-        <a href="iq/" class="cardIQ">
+        <a href="iq/" class="div-card">
           <img src="../media/TSB_IQ.png" alt="Inquisitors">
         </a>
-        <a href="ii/" class="cardII">
+        <a href="ii/" class="div-card">
           <img src="../media/TSB_II.png" alt="Imperial Intelligence">
         </a>
-        <a href="rev/" class="cardREV">
+        <a href="rev/" class="div-card">
           <img src="../media/TSB_REV.png" alt="Reavers">
         </a>
-        <a href="dm/" class="cardDM">
+        <a href="dm/" class="div-card">
           <img src="../media/TSB_DM.png" alt="Dread Masters">
         </a>
       </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
-        Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Main Page
+      </a>
     </div>
   </main>
 
