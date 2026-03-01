@@ -3,41 +3,101 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Marka Ragnos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marka Ragnos - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../../media/TSB.png">
   <link href="../../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .bio-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 45px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .section-header {
+      color: #ff3333;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .description {
+      line-height: 1.9;
+      color: #eee;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Highlighting key names/dates */
+    b {
+      color: #ff6b6b;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Holocron';
-    const FinalPath = '../../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <p></p>
-    <p></p>
+  <main class="bio-container">
     <h1 class="title">Marka Ragnos</h1>
 
-    <p></p>
-    <section>
+    <section class="glass-panel">
+      <h2 class="section-header">Lord of the Golden Age</h2>
       <p class="description">
-        Sith-Human hybrid, Marka Ragnos was a direct descendant from a Dark Jedi who had fled the Republic after the Hundred-Year Darkness, who lived 20,000 years after the formation of the Old Republic. Feared, obeyed, and admired among the Sith, Ragnos was considered to have been the greatest Dark Lord of the Sith of his age and was born a long time before 5100 BBY.<br><br>When the Dark Lord of the Sith died, Ragnos and another powerful Sith, Simus, rose up to take the mantle. A formidable warrior, Ragnos dueled and defeated Simus in combat circa 5100 BBY, proving himself worthy of the mantle of Dark Lord of the Sith.<br><br>After gaining the mantle of a Dark Lord, he led ruthless campaigns against his Sith enemies, pitting his adversaries against each other and ensuring that there were no threats to his throne. His iron-fisted rule would last over a century.<br><br>During those times Ragnos likely composed his own epistle, created a Scepter capable of siphoning the Force from many different places, which could be used to empower non-Force users, and designed a pair of gauntlets capable of augmenting the strength of the Force in its user.<br><br>Years later, Ragnos, as Dark Lord of the Sith and the ruler of the Sith Council and Sith Empire, was petitioned by a thirteen-year-old boy named Tenebrae. The youth had come before Marka Ragnos to ask for training in the Sith arts and for recognition as the ruler of his father's domain, the planet Medriaas.<br><br>Although he declined to take him as an apprentice, Lord Ragnos was impressed by Tenebrae's power and ambition, and named him the ruler of Medriaas, bestowing on him the rank of Sith Lord and the name Vitiate.<br><br>After years of his rule, Marka Ragnos passed away in 5000 BBY. His death was marked as the end of a golden age of the Sith Empire, despite its reluctance to continue expansion.
+        A Sith-Human hybrid and direct descendant of the original Dark Jedi exiles, <b>Marka Ragnos</b> was the most feared and admired Dark Lord of his age. Rising to power circa <b>5100 BBY</b>, he secured his mantle by defeating his rival, <b>Simus</b>, in a formidable duel that proved his absolute worthiness to lead the Empire.
+        <br><br>
+        His iron-fisted rule lasted over a century, a period defined by ruthless internal stability. Ragnos was a master manipulator who pitted his adversaries against one another to ensure no threat ever reached his throne. During this time, he crafted legendary artifacts, including a <b>Scepter</b> capable of siphoning and storing Force energy and <b>Gauntlets</b> designed to augment the physical and metaphysical strength of the wearer.
+        <br><br>
+        It was Ragnos who first recognized the potential of the young <b>Tenebrae</b>. Impressed by the thirteen-year-old's cold ambition and raw power, Ragnos granted him the name <b>Darth Vitiate</b> and recognized him as the ruler of Medriaas, setting the stage for the next great era of Sith power.
+        <br><br>
+        Marka Ragnos passed away in <b>5000 BBY</b>. His death signaled the end of the Sith Empire’s "Golden Age" and triggered the chaotic power struggle between Naga Sadow and Ludo Kressh that would eventually lead to the Great Hyperspace War.
       </p>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to People
-        </a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to People
+      </a>
     </div>
   </main>
 
@@ -45,5 +105,3 @@
 </body>
 
 </html>
-
-
