@@ -92,7 +92,7 @@
         li.style.marginBottom = "12px";
         // This splits 'ARTICLE I — TITLE' to just show 'ARTICLE I' in sidebar
         const shortTitle = article.title.split('—')[0].trim(); 
-        li.innerHTML = `<a href="#${article.id}" style="color: #ff6b6b; text-decoration: none; font-weight: bold;">${shortTitle}</a>`;
+        li.innerHTML = `<a href="#${article.id}" style="color: #ff6b6b; text-decoration: none; font-weight: bold;">${article.title}</a>`;
         sidebar.appendChild(li);
 
         // 2. Build Article Content
