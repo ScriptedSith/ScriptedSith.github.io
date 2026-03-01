@@ -3,44 +3,121 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Other - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../media/TSB.png">
   <link href="../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .holocron-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .section-header {
+      color: #ff3333;
+      border-left: 4px solid #ff3333;
+      padding-left: 15px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.1rem;
+    }
+
+    /* WIP / Forbidden Lore Styling */
+    .mystery-box {
+      text-align: center;
+      padding: 60px 20px;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      border-radius: 10px;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .status-text {
+      color: #ff6b6b;
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png');">
 
-  <!-- Navigation Bar -->
   <div id="navbar-container"></div>
 
   <script src="../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Holocron';
-    const FinalPath = '../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Other</h1>
+  <main class="holocron-container">
+    <h1 class="title">Miscellaneous Lore</h1>
 
-    <section>
+    <section class="glass-panel">
+      <h2 class="section-header">Forbidden Knowledge</h2>
       <p class="description">
-        Welcome to the Other Section of the Sith Holocron.<br>
-        This section houses knowledge that defies easy classification secrets,
-        anomalies, and forbidden lore that lie beyond the boundaries of conventional categories.
-        Here you may find lost rituals, obscure teachings, and the remnants of truths too dangerous or fragmented to fit elsewhere. Proceed with caution as power often hides in the unexpected.
+        Welcome to the Other Section of the Sith Holocron. This section houses knowledge that defies easy 
+        classification—secrets, anomalies, and forbidden lore that lie beyond the boundaries of conventional categories. 
+        Here you may find lost rituals, obscure teachings, and the remnants of truths too dangerous to fit elsewhere. 
+        Proceed with caution; power often hides in the unexpected.
       </p>
     </section>
-    <section>
-      <h2>WIP</h2>
+
+    <section class="glass-panel">
+      <div class="mystery-box">
+        <p class="status-text">Seal of the Dark Council Intact</p>
+        <p style="color: #888; margin-top: 15px; font-style: italic;">
+          [ These archives are currently shrouded. Further clearance is required to unveil the hidden truths. ]
+        </p>
+      </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Holocron</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Holocron
+      </a>
     </div>
   </main>
 
@@ -48,5 +125,3 @@
 </body>
 
 </html>
-
-
