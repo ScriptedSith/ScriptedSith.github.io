@@ -3,62 +3,147 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guides - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../media/TSB.png">
   <link href="../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    /* Content wrapper for the guides index */
+    .guides-container {
+      max-width: 1100px;
+      margin: 120px auto 60px; /* Space for navbar */
+      padding: 0 20px;
+    }
+
+    /* Glass Panel Styling */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.85) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    /* Grid for Guide Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      background: rgba(255, 0, 0, 0.15);
+      border-color: #ff3333;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: #ff3333;
+      margin: 0 0 10px 0;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../media/MainGroup_LOGO.png');">
 
-  <!-- Navigation Bar -->
   <div id="navbar-container"></div>
 
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    const FinalPath = '../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Guides</h1>
+  <main class="guides-container">
+    <h1 class="title">Brotherhood Archives</h1>
 
-    <section>
-      <h2>Brotherhood Guides and Resources</h2>
-      <p class="description">
+    <section class="glass-panel">
+      <h2 style="color: #ff3333; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0;">Guides and Resources</h2>
+      <p style="font-size: 1.1rem; line-height: 1.7; color: #ddd;">
         Welcome to the comprehensive guide section of the Sith Brotherhood. Here you will find essential information
         about our policies, hosting procedures, ranking system, and tactical formations. These guides serve as the
         foundation for all Brotherhood operations and activities.
       </p>
     </section>
-    <section class="grid">
+
+    <section class="glass-panel">
+      <div class="grid">
         <a href="sith-imperial-policy/" class="card">
-          <h2>Sith Imperial Policy &rarr;</h2>
-          <p>Official policies and regulations governing the Brotherhood.</p>
+          <div>
+            <h2>Sith Imperial Policy &rarr;</h2>
+            <p>Official policies and regulations governing the Brotherhood.</p>
+          </div>
         </a>
 
         <a href="hosting/" class="card">
-          <h2>Hosting Guide &rarr;</h2>
-          <p>Complete guide for hosting events, trainings, and trials.</p>
+          <div>
+            <h2>Hosting Guide &rarr;</h2>
+            <p>Complete guide for hosting events, trainings, and trials.</p>
+          </div>
         </a>
 
         <a href="ranks/" class="card">
-          <h2>Ranks &rarr;</h2>
-          <p>Detailed breakdown of the Brotherhood's ranking system.</p>
+          <div>
+            <h2>Ranks &rarr;</h2>
+            <p>Detailed breakdown of the Brotherhood's ranking system.</p>
+          </div>
         </a>
 
         <a href="commands-formations/" class="card">
-          <h2>Commands and Formations &rarr;</h2>
-          <p>Military commands and tactical formations used by the Brotherhood.</p>
+          <div>
+            <h2>Commands and Formations &rarr;</h2>
+            <p>Military commands and tactical formations used by the Brotherhood.</p>
+          </div>
         </a>
+      </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
-        Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Main Page
+      </a>
     </div>
   </main>
 
