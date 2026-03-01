@@ -104,7 +104,7 @@ export const policyData = [
     title: "ARTICLE XIII — CUFFS REGULATION",
     sections: [
       { name: "Section 13.01 — Speed & Abuse", text: "Sith Overseer+ may not use cuffs for edge/speed boosts. Violation results in HR removal." },
-      { name: "Section 13.02 — Lawful Arrest", text: "Arrests require valid reasons. DC+ and Divisional members cannot be arrested (except by Imperial Intelligence). Report law-breakers to Overseers or High Command." },
+      { name: "Section 13.02 — Lawful Arrest", text: "Arrests require valid reasons. DC+ and Divisional members cannot be arrested (except by Imperial Intelligence and High Ranking Inquisitors). Report law-breakers to Overseers or High Command." },
       { name: "Section 13.03 — Cuff Times", text: "<b>3 Mins:</b> Locked Hall (3rd warn), Grotthu-Acolyte in DC room, failing to hide admin (3rd warn).<br><b>5 Mins:</b> Wrong divisional rooms, Apprentice-Knight in DC room, Refusing morph, Switching to hostile, TK/RK.<br><b>10 Mins:</b> Overseer-Lord in DC room, Visitor raiding/killing, Mass trolling, Blocking division duties.<br><b>15 Mins:</b> Darth in DC room, Spawn killing, Force Abuse, Mass TK." }
     ]
   },
