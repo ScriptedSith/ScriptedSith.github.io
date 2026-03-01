@@ -96,7 +96,8 @@
   <script>
     const ACTIVE = 'Divisions';
     const FinalPath = '../../';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
+    // Passing 'rev' as the third argument to trigger the Silver/White navbar theme
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath, 'rev');
   </script>
 
   <main class="division-page-container">
