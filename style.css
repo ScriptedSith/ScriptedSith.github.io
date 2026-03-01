@@ -625,18 +625,6 @@ img {
     padding: 0 2rem;
   }
 }
-/* Glassmorphism Effect for Readability */
-.glass-panel {
-    background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
-    backdrop-filter: blur(10px);    /* Blurs the image behind it */
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px border rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
-    color: #ffffff; /* Ensures text is always white */
-}
 
 /* Layout for the Sidebar + Content */
 .guide-wrapper {
@@ -685,4 +673,26 @@ h2 {
     border-bottom: 2px solid #ff3333;
     padding-bottom: 5px;
     margin-top: 0;
+}
+.glass-panel {
+    background: rgba(15, 15, 15, 0.85); /* Slightly darker for Sith theme */
+    backdrop-filter: blur(12px) saturate(150%); /* Adds a slight color boost to the blur */
+    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border glow */
+    transition: transform 0.3s ease;
+}
+
+.glass-panel:hover {
+    transform: translateY(-5px); /* Adds a subtle lift effect when hovering */
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+body.page-background::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dims the background image by 40% */
+    z-index: -1; /* Keeps it behind the content */
 }
