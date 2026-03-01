@@ -3,49 +3,128 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reavers - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../media/TSB_REV.png">
   <link href="../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .division-page-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel - REV Silver/White Theme (#ffffff) */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2); /* White/Silver Border */
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.05);
+      color: white;
+      text-align: center;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ffffff;
+      border-left: 3px solid #ffffff;
+      padding-left: 20px;
+      margin: 30px auto;
+      max-width: 85%;
+      text-align: left;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+    }
+
+    .external-link-card {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #ffffff;
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .external-link-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../media/REV_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
-<script> runTextBlend("gotcha"); </script>
 
   <script src="../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Divisions';
-    const FinalPath = '../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <p></p>
-    <p></p>
-    <h1 class="title">〔𝐑𝐞𝐚𝐯𝐞𝐫𝐬〕</h1>
+  <main class="division-page-container">
+    <h1 class="title">Reavers</h1>
 
-    <p></p>
-    <section>
+    <section class="glass-panel">
       <p class="description">
-        Reavers were one of the main combatant elite class of Sith, unmatched with dual sabers, they are the personal
-        assassin's of the Sith Emperor.<br><br>
-        "𝙏𝙝𝙚 𝙚𝙡𝙞𝙩𝙚 𝙨𝙚𝙘𝙧𝙚𝙩𝙞𝙫𝙚 𝙙𝙞𝙫𝙞𝙨𝙞𝙤𝙣 𝙤𝙛 𝙍𝙚𝙖𝙫𝙚𝙧𝙨 𝙨𝙞𝙣𝙜𝙡𝙚 𝙝𝙖𝙣𝙙𝙚𝙙𝙡𝙮 𝙜𝙪𝙖𝙧𝙖𝙣𝙩𝙚𝙚𝙙 𝙘𝙖𝙥𝙩𝙪𝙧𝙚 𝙤𝙛 𝘾𝙤𝙧𝙪𝙨𝙘𝙖𝙣𝙩 𝙛𝙤𝙧 𝙩𝙝𝙚 𝙀𝙢𝙥𝙚𝙧𝙤𝙧." - 𝙎𝙤𝙧𝙘𝙚𝙧𝙚𝙧 𝙆𝙖𝙡𝙖𝙢
+        Reavers are the elite combatants of the Sith, unmatched in their mastery of dual lightsabers. 
+        Operating as the personal assassins of the Sith Emperor, they strike with a precision and 
+        speed that leaves no room for failure.
       </p>
-    </section>
-    <section class="grid">
-      <a href="https://www.roblox.com/groups/7440439/TSB-Reavers#!/about" class="card">
-        <h2>Group Link</h2>
-      </a>
+
+      <div class="quote">
+        "The elite secretive division of Reavers single handedly guaranteed capture of Coruscant for the Emperor." <br>
+        <span style="color: #aaa; font-size: 0.9rem; text-transform: uppercase; display: block; margin-top: 10px;">— Sorcerer Kalam</span>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <a href="https://www.roblox.com/groups/7440439/TSB-Reavers#!/about" class="external-link-card">
+          Access Group Records
+        </a>
+      </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Divisions
-         Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ffffff; font-size: 1.1rem; text-decoration: none; border: 1px solid #ffffff; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Divisions
+      </a>
     </div>
   </main>
 
@@ -53,4 +132,3 @@
 </body>
 
 </html>
-
