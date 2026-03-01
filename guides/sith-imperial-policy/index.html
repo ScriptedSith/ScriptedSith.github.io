@@ -27,8 +27,24 @@
     min-width: 250px;
     position: sticky; /* Makes it stay while you scroll */
     top: 100px; /* Distance from the top of the window */
+    max-height: calc(100vh - 120px); /* Limit height to screen minus some padding */
+    overflow-y: auto;               /* Add scrollbar if content is too long */
+    padding-right: 10px;
     z-index: 10;
   }
+   /* Optional: Make the scrollbar look sleek and "Sith-like" */
+.toc-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.toc-sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.toc-sidebar::-webkit-scrollbar-thumb {
+    background: #ff3333; /* Sith Red scrollbar */
+    border-radius: 10px;
+}
 
   /* The Main Content on the Right */
   .content-area {
