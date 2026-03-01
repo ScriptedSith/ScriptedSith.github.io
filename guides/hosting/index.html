@@ -3,48 +3,146 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hosting Guide - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../media/TSB.png">
   <link href="../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .hosting-container {
+      max-width: 1000px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+    }
+
+    .section-header {
+      color: #ff3333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    /* Grid for Hosting Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card:hover {
+      background: rgba(255, 0, 0, 0.15);
+      border-color: #ff3333;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #ff3333;
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    const FinalPath = '../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Hosting Guide</h1>
-    <p></p>
-    <p></p>
-    <section class="grid">
-      <a href="events/" class="card">
-        <h2>Events</h2>
-      </a>
+  <main class="hosting-container">
+    <h1 class="title">Command & Hosting</h1>
 
-      <a href="trainings/" class="card">
-        <h2>Trainings &rarr;</h2>
-      </a>
+    <section class="glass-panel">
+      <h2 class="section-header">Operational Authority</h2>
+      <p class="description">
+        Those of sufficient rank are tasked with the growth and discipline of the Brotherhood. 
+        Select a protocol below to review the official requirements for hosting events, 
+        conducting specialized training, or overseeing the trials of ascension.
+      </p>
 
-      <a href="trials/" class="card">
-        <h2>Trials &rarr;</h2>
-      </a>
+      <div class="grid">
+        <a href="events/" class="card">
+          <h2>Events</h2>
+        </a>
+
+        <a href="trainings/" class="card">
+          <h2>Trainings</h2>
+        </a>
+
+        <a href="trials/" class="card">
+          <h2>Trials</h2>
+        </a>
+      </div>
     </section>
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Guides</a>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Guides
+      </a>
     </div>
   </main>
+
+  <script type="module" src="../../script.js"></script>
 </body>
 
 </html>
-
-
