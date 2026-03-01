@@ -1,39 +1,120 @@
-<div class="guide-wrapper">
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sith Imperial Policy - The Sith Brotherhood</title>
+  <link rel="icon" type="image/x-icon" href="../../media/TSB.png">
+  <link href="../../style.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+    /* Inline fixes to ensure the glass panels and sidebar show up correctly */
+    .guide-wrapper {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 120px auto 40px; /* Space for the navbar */
+      padding: 0 20px;
+    }
+
+    .toc-sidebar {
+      width: 280px;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      display: block;
+    }
+
+    .content-area {
+      flex: 1;
+    }
+
+    /* The 'Glass' look for your text containers */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.8) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 2rem;
+      color: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 900px) {
+      .guide-wrapper { flex-direction: column; margin-top: 80px; }
+      .toc-sidebar { position: relative; width: 100%; top: 0; }
+    }
+  </style>
+</head>
+
+<body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png'); background-attachment: fixed; background-size: cover;">
+  
+  <div id="navbar-container"></div>
+
+  <script src="../../navbar.js"></script>
+  <script>
+    // Set the active page for your specific navbar.js logic
+    const ACTIVE = 'Guides';
+    const FinalPath = '../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
+  </script>
+
+  <main class="guide-wrapper">
+    
     <aside class="toc-sidebar glass-panel">
-        <h3 style="color: #ff3333; margin-top: 0;">Policy Index</h3>
-        <ul id="sidebar-links"></ul>
+      <h3 style="color: #ff3333; margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px;">Policy Index</h3>
+      <ul id="sidebar-links" style="list-style: none; padding: 0; margin-top: 15px;">
+          </ul>
+      <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
+      <a href="../" style="color: #ff6b6b; text-decoration: none; font-size: 0.9rem;">← Return to Guides</a>
     </aside>
 
-    <div id="policy-container" class="content-area"></div>
-</div>
+    <div id="policy-container" class="content-area">
+        <h1 class="title" style="margin-bottom: 30px; text-shadow: 0 0 15px rgba(255,0,0,0.5);">Sith Imperial Policy</h1>
+        </div>
 
+  </main>
 
-<script type="module">
+  <script type="module" src="../../script.js"></script>
+
+  <script type="module">
     import { policyData } from './policyData.js';
 
     const container = document.getElementById('policy-container');
     const sidebar = document.getElementById('sidebar-links');
 
     policyData.forEach(article => {
-        // 1. Create Sidebar Link
+        // 1. Add to Sidebar
         const li = document.createElement('li');
-        li.innerHTML = `<a href="#${article.id}">${article.title.split('—')[0]}</a>`;
+        li.style.marginBottom = "12px";
+        // This splits 'ARTICLE I — TITLE' to just show 'ARTICLE I' in sidebar
+        const shortTitle = article.title.split('—')[0].trim(); 
+        li.innerHTML = `<a href="#${article.id}" style="color: #ff6b6b; text-decoration: none; font-weight: bold;">${shortTitle}</a>`;
         sidebar.appendChild(li);
 
-        // 2. Build Section Content
+        // 2. Build Article Content
         let sectionHTML = '';
         article.sections.forEach(sec => {
-            sectionHTML += `<p><b>${sec.name}</b><br>${sec.text}</p>`;
+            sectionHTML += `<div style="margin-bottom: 20px;">
+                                <p style="color: #ff3333; font-weight: bold; margin-bottom: 5px;">${sec.name}</p>
+                                <p style="line-height: 1.6; margin-top: 0;">${sec.text}</p>
+                            </div>`;
         });
 
-        // 3. Inject Glass Panel using your new function
+        // 3. Inject the Glass Section
         container.innerHTML += `
             <section id="${article.id}" class="glass-panel">
-                <h2 style="color: #ff3333; border-bottom: 2px solid #ff3333; padding-bottom: 5px; margin-top: 0;">
+                <h2 style="color: #ffffff; border-left: 4px solid #ff3333; padding-left: 15px; margin-top: 0; margin-bottom: 25px;">
                     ${article.title}
                 </h2>
                 ${sectionHTML}
             </section>
         `;
     });
-</script>
+  </script>
+
+</body>
+</html>
