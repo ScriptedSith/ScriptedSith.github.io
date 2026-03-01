@@ -1,21 +1,42 @@
+function createNavbar(ACTIVE = 'Home', rootPath = '', division = '') {
+  // Define color map based on your style.css
+  const divisionColors = {
+    'dhg': '#7d0000', // Dark Honor Guard
+    'iq': '#ff00ff',  // Inquisitors
+    'ii': '#00ffff',  // Imperial Intelligence
+    'rev': '#ffffff', // Reavers
+    'dm': '#ffff00'   // Dread Masters
+  };
 
-function createNavbar(ACTIVE = 'Home', rootPath = '') {
-  // Detect current page depth by counting folders in pathname
-  // Split pathname, remove empty strings and 'index.html', then use the number
-  // of segments to compute how many `../` are needed to reach the repo root.
+  const accentColor = divisionColors[division.toLowerCase()] || '#ff6b6b'; // Default to original red
 
-  // The depth is the number of folder segments deep we are from the repository root.
-  // Using `segments.length` ensures we compute the correct number of `../` even
-  // when already inside a content folder like `divisions` (avoids duplicating
-  // `divisions/divisions/...` links).
-  
+  // Inject dynamic styles if a division is active
+  let dynamicStyle = '';
+  if (division) {
+    dynamicStyle = `
+      <style>
+        .navbar { border-bottom-color: ${accentColor} !important; }
+        .nav-link:hover, .nav-link.active { 
+          color: ${accentColor} !important; 
+          border-bottom-color: ${accentColor} !important;
+          background: rgba(${parseInt(accentColor.slice(1,3), 16)}, ${parseInt(accentColor.slice(3,5), 16)}, ${parseInt(accentColor.slice(5,7), 16)}, 0.1) !important;
+        }
+        .dropdown { border-color: ${accentColor} !important; }
+        .dropdown-link:hover, .sub-dropdown-link:hover { 
+          color: ${accentColor} !important; 
+          background: rgba(${parseInt(accentColor.slice(1,3), 16)}, ${parseInt(accentColor.slice(3,5), 16)}, ${parseInt(accentColor.slice(5,7), 16)}, 0.2) !important;
+        }
+      </style>
+    `;
+  }
+
   const navbar = `
-    <!-- Navigation Bar -->
+    ${dynamicStyle}
     <nav class="navbar">
       <div class="nav-container">
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="/" class="nav-link${ACTIVE === 'Home' ? ' active' : ''}">Home</a>
+            <a href="${rootPath}" class="nav-link${ACTIVE === 'Home' ? ' active' : ''}">Home</a>
           </li>
           <li class="nav-item">
             <a href="${rootPath}lore/" class="nav-link${ACTIVE === 'Group Lore' ? ' active' : ''}">Group Lore</a>
