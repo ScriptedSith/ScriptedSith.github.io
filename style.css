@@ -675,11 +675,16 @@ h2 {
     margin-top: 0;
 }
 .glass-panel {
-    background: rgba(15, 15, 15, 0.85); /* Slightly darker for Sith theme */
-    backdrop-filter: blur(12px) saturate(150%); /* Adds a slight color boost to the blur */
-    border: 1px solid rgba(255, 0, 0, 0.2); /* Subtle red border glow */
-    transition: transform 0.3s ease;
-}
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 2rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
 
 .glass-panel:hover {
     transform: translateY(-5px); /* Adds a subtle lift effect when hovering */
