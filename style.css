@@ -625,3 +625,64 @@ img {
     padding: 0 2rem;
   }
 }
+/* Glassmorphism Effect for Readability */
+.glass-panel {
+    background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+    backdrop-filter: blur(10px);    /* Blurs the image behind it */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px border rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    color: #ffffff; /* Ensures text is always white */
+}
+
+/* Layout for the Sidebar + Content */
+.guide-wrapper {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.toc-sidebar {
+    width: 250px;
+    position: sticky;
+    top: 100px; /* Adjust based on navbar height */
+    height: fit-content;
+    display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 900px) {
+    .toc-sidebar { display: block; }
+}
+
+.toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-sidebar a {
+    color: #ff6b6b;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.toc-sidebar a:hover { color: #fff; }
+
+.content-area {
+    flex: 1;
+}
+
+/* Section Header Styling */
+h2 {
+    color: #ff3333;
+    border-bottom: 2px solid #ff3333;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
