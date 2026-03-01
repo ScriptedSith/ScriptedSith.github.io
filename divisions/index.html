@@ -20,7 +20,7 @@
       background: rgba(0, 0, 0, 0.5) !important;
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       padding: 40px;
       margin-bottom: 30px;
@@ -56,32 +56,69 @@
     }
 
     .div-card {
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
       display: block;
-      padding: 15px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.03);
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
     }
 
     .div-card img {
       width: 100%;
-      max-width: 160px;
+      max-width: 150px;
       height: auto;
-      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: grayscale(0.3) drop-shadow(0 0 5px rgba(0,0,0,0.5));
+      transition: all 0.3s ease;
     }
 
-    .div-card:hover {
-      background: rgba(255, 0, 0, 0.1);
-      border-color: rgba(255, 0, 0, 0.4);
+    /* Individual Division Color Styling based on style.css */
+    
+    /* DHG - Deep Red (#7d0000) */
+    .card-dhg:hover {
+      background: rgba(125, 0, 0, 0.15);
+      border-color: #7d0000;
+      box-shadow: 0 0 20px rgba(125, 0, 0, 0.3);
+      transform: translateY(-10px);
+    }
+
+    /* IQ - Magenta (#ff00ff) */
+    .card-iq:hover {
+      background: rgba(255, 0, 255, 0.1);
+      border-color: #ff00ff;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+      transform: translateY(-10px);
+    }
+
+    /* II - Cyan (#00ffff) */
+    .card-ii:hover {
+      background: rgba(0, 255, 255, 0.1);
+      border-color: #00ffff;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      transform: translateY(-10px);
+    }
+
+    /* REV - White (#ffffff) */
+    .card-rev:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+      transform: translateY(-10px);
+    }
+
+    /* DM - Yellow (#ffff00) */
+    .card-dm:hover {
+      background: rgba(255, 255, 0, 0.1);
+      border-color: #ffff00;
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
       transform: translateY(-10px);
     }
 
     .div-card:hover img {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.6));
+      filter: grayscale(0) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+      transform: scale(1.05);
     }
 
     body.page-background {
@@ -118,31 +155,30 @@
       <h2 class="section-header">Specialized Branches</h2>
       <p class="description">
         The Sith Brotherhood is composed of elite sub-factions, each serving a vital role in the preservation 
-        of our Empire. From the silent shadows of Intelligence to the unwavering steel of the Honor Guard, 
-        select a division to view their purpose and entry requirements.
+        of our Empire. Select a division to view their purpose and entry requirements.
       </p>
 
       <div class="grid-divisions">
-        <a href="dhg/" class="div-card">
+        <a href="dhg/" class="div-card card-dhg">
           <img src="../media/TSB_DHG.png" alt="Dark Honor Guard">
         </a>
-        <a href="iq/" class="div-card">
+        <a href="iq/" class="div-card card-iq">
           <img src="../media/TSB_IQ.png" alt="Inquisitors">
         </a>
-        <a href="ii/" class="div-card">
+        <a href="ii/" class="div-card card-ii">
           <img src="../media/TSB_II.png" alt="Imperial Intelligence">
         </a>
-        <a href="rev/" class="div-card">
+        <a href="rev/" class="div-card card-rev">
           <img src="../media/TSB_REV.png" alt="Reavers">
         </a>
-        <a href="dm/" class="div-card">
+        <a href="dm/" class="div-card card-dm">
           <img src="../media/TSB_DM.png" alt="Dread Masters">
         </a>
       </div>
     </section>
 
     <div style="margin-top: 3rem; text-align: center;">
-      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s; background: rgba(0,0,0,0.3);">
         ← Return to Main Page
       </a>
     </div>
