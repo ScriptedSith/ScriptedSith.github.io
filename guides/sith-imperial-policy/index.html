@@ -8,46 +8,59 @@
   <link rel="icon" type="image/x-icon" href="../../media/TSB.png">
   <link href="../../style.css" rel="stylesheet" type="text/css" />
   
-  <style>
-    /* Inline fixes to ensure the glass panels and sidebar show up correctly */
+ <style>
+  /* The Container that holds both Sidebar and Content */
+  .guide-wrapper {
+    display: flex !important;
+    flex-direction: row; /* Forces side-by-side */
+    align-items: flex-start; /* Crucial for 'sticky' to work */
+    gap: 40px;
+    max-width: 1300px;
+    margin: 120px auto 40px; /* 120px top margin to clear your navbar */
+    padding: 0 20px;
+    position: relative;
+  }
+
+  /* The Sidebar on the Left */
+  .toc-sidebar {
+    width: 250px;
+    min-width: 250px;
+    position: sticky; /* Makes it stay while you scroll */
+    top: 100px; /* Distance from the top of the window */
+    z-index: 10;
+  }
+
+  /* The Main Content on the Right */
+  .content-area {
+    flex: 1; /* Takes up the remaining space */
+    min-width: 0; /* Prevents layout overflow */
+  }
+
+  .glass-panel {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 2rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Responsive: If the screen is too small, stack them */
+  @media (max-width: 1000px) {
     .guide-wrapper {
-      display: flex;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 120px auto 40px; /* Space for the navbar */
-      padding: 0 20px;
+      flex-direction: column;
+      margin-top: 100px;
     }
-
     .toc-sidebar {
-      width: 280px;
-      position: sticky;
-      top: 100px;
-      height: fit-content;
-      display: block;
+      position: relative;
+      width: 100%;
+      top: 0;
     }
-
-    .content-area {
-      flex: 1;
-    }
-
-    /* The 'Glass' look for your text containers */
-    .glass-panel {
-      background: rgba(0, 0, 0, 0.8) !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 0, 0, 0.2);
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 2rem;
-      color: white;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    }
-
-    @media (max-width: 900px) {
-      .guide-wrapper { flex-direction: column; margin-top: 80px; }
-      .toc-sidebar { position: relative; width: 100%; top: 0; }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png') !important; background-attachment: fixed; background-size: cover; background-position: center; background-color: #000; margin: 0; padding: 0;">
