@@ -96,7 +96,8 @@
   <script>
     const ACTIVE = 'Divisions';
     const FinalPath = '../../';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
+    // Passing 'dm' as the third argument to trigger the Yellow navbar theme
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath, 'dm');
   </script>
 
   <main class="division-page-container">
