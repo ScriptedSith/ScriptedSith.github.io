@@ -96,7 +96,8 @@
   <script>
     const ACTIVE = 'Divisions';
     const FinalPath = '../../';
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
+    // Passing 'iq' as the third argument to trigger the Magenta navbar theme
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath, 'iq');
   </script>
 
   <main class="division-page-container">
