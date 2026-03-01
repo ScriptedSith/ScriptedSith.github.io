@@ -3,67 +3,144 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hosting Trainings - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../../media/TSB.png">
   <link href="../../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .trainings-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .rank {
+      color: #ff3333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    .rankdesc {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.05rem;
+    }
+
+    .step-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .step-list li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .step-list li::before {
+      content: "»";
+      position: absolute;
+      left: 0;
+      color: #ff3333;
+      font-weight: bold;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    const FinalPath = '../../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Trainings</h1>
-    <section>
+  <main class="trainings-container">
+    <h1 class="title">Training Protocols</h1>
+
+    <section class="glass-panel">
       <h2 class="rank">Combat Training</h2>
-      <p></p>
-      <p class="rankdesc">
-        Start off by telling them who you are and your rank, introduce your co-host if you have one.<br>
-        Have them whisper the Sith code line by line.<br>
-        Duel each other 3 times.<br>
-        TDM or FFA or Health Rotations<br>
-        Then finish the training, log it, then pass them if there is any that passed.<br>
-      </p>
+      <div class="rankdesc">
+        <ul class="step-list">
+          <li>Introduce yourself, your rank, and any co-hosts.</li>
+          <li>Require attendees to whisper the Sith Code line by line.</li>
+          <li>Conduct standard duels (Best of 3).</li>
+          <li>Execute a specialized combat phase: Team Deathmatch (TDM), Free-For-All (FFA), or Health Rotations.</li>
+          <li>Conclude the session, log the results, and promote those who displayed sufficient skill.</li>
+        </ul>
+      </div>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Lore Training</h2>
-      <p></p>
-      <p class="rankdesc">
-        Start off by telling them who you are and your rank, introduce your co-host if you have one.<br>
-        Have them whisper the Sith code line by line.<br>
-        Pick a subject in The Sith Holocron area and teach it.<br>
-        Then do a 5 question Quiz, must get 3 to pass.<br>
-        Then finish the training, log it, then pass them if there is any that passed.<br>
-      </p>
+      <div class="rankdesc">
+        <ul class="step-list">
+          <li>Introduce yourself, your rank, and any co-hosts.</li>
+          <li>Require attendees to whisper the Sith Code line by line.</li>
+          <li>Select a specific subject from the <b>Sith Holocron</b> and provide a detailed lesson.</li>
+          <li>Administer a 5-question quiz (Attendees must score at least 3/5 to pass).</li>
+          <li>Conclude the session, log the results, and promote successful scholars.</li>
+        </ul>
+      </div>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Law Training</h2>
-      <p></p>
-      <p class="rankdesc">
-        Start off by telling them who you are and your rank, introduce your co-host if you have one.<br>
-        Have them whisper the Sith code line by line.<br>
-        Go over 3 sections of the Imperial Policy.<br>
-        Then do a 5 question Quiz, must get 3 to pass.<br>
-        Then finish the training, log it, then pass them if there is any that passed.<br>
-      </p>
+      <div class="rankdesc">
+        <ul class="step-list">
+          <li>Introduce yourself, your rank, and any co-hosts.</li>
+          <li>Require attendees to whisper the Sith Code line by line.</li>
+          <li>Explain 3 critical sections of the <b>Imperial Policy</b>.</li>
+          <li>Administer a 5-question quiz (Attendees must score at least 3/5 to pass).</li>
+          <li>Conclude the session, log the results, and promote those who demonstrate legal competence.</li>
+        </ul>
+      </div>
     </section>
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Hosting
-        Guide</a>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Hosting Guide
+      </a>
     </div>
   </main>
+
+  <script type="module" src="../../../script.js"></script>
 </body>
+
+</html>
