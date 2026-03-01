@@ -3,125 +3,170 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hosting Trials - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../../media/TSB.png">
   <link href="../../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .trials-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .rank {
+      color: #ff3333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    .rankdesc {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.05rem;
+    }
+
+    .rankdesc b {
+      color: #ff6b6b;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .kos-notice {
+      margin-top: 15px;
+      padding: 10px;
+      background: rgba(255, 0, 0, 0.1);
+      border-left: 3px solid #ff3333;
+      font-weight: bold;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
-    const FinalPath = '../../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Trials</h1>
-    <section>
+  <main class="trials-container">
+    <h1 class="title">Trials of Ascension</h1>
+
+    <section class="glass-panel">
       <h2 class="rank">Apprentice Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>Sith Apprentices may attend their master hosting these trials so long as they have been their apprentice for
-          3 days minimum.</b><br>
-        Have them whisper the Sith code line by line.<br>
-        The Master must inform the apprentice of what the trial will consist of. The master may choose how they want to
-        run it.<br>
-        Once the apprentice passes the trial they are ranked Sith Knight in the group and may choose whether they wish
-        to be your apprentice anymore.<br>
+        <b>Requirement: Must have been an apprentice for a minimum of 3 days.</b>
+        • Recite the Sith Code line by line via whisper.<br>
+        • The Master chooses the specific format of the trial (Combat, Lore, or Task).<br>
+        • Upon passing, the apprentice is promoted to Sith Knight and may choose their future path.
       </p>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Knight Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>Sith Eradicators can pass this trial in order to become an NCO and learn the jobs of being an HR and can be
-          hosted by a Sith Master+ and consists of:</b><br>
-        Recite the Sith Code, with no mistakes.<br>
-        Answer 2 Lore Questions, may get 1 wrong.<br>
-        Answer 3 IP Questions, may get 1 wrong.<br>
-        Duel the host 3 times.<br>
-        <b>Upon the event completion and them being ranked and recorded. Announce KOS for 3 minutes.</b><br>
-        <i>Host has complete authority to pass or fail attendees based on combat or how the attendee acts during the
-          trial.</i>
+        <b>Requirement: Sith Eradicator rank. Hosted by Sith Master+.</b>
+        • Recite the Sith Code with zero mistakes.<br>
+        • Answer 2 Lore Questions (1 mistake allowed).<br>
+        • Answer 3 IP Questions (1 mistake allowed).<br>
+        • Duel the host 3 times.<br>
+        <div class="kos-notice">POST-TRIAL: Announce KOS for 3 minutes.</div>
       </p>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Overseer Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>Overseer Trials may be hosted by a Sith Lord+ and consist of:</b><br>
-        Recite the Sith Code, with no mistakes.<br>
-        Answer 5 Lore Questions, may get 2 wrong.<br>
-        Answer 5 IP Questions, may get 2 wrong.<br>
-        Duel the host 7 times.<br>
-        <b>Upon the event completion and them being ranked and recorded. Announce KOS for 5 minutes.</b><br>
-        <i>Host has complete authority to pass or fail attendees based on combat or how the attendee acts during the
-          trial.</i>
+        <b>Requirement: Sith Knight rank. Hosted by Sith Lord+.</b>
+        • Recite the Sith Code with zero mistakes.<br>
+        • Answer 5 Lore Questions (2 mistakes allowed).<br>
+        • Answer 5 IP Questions (2 mistakes allowed).<br>
+        • Duel the host 7 times.<br>
+        <div class="kos-notice">POST-TRIAL: Announce KOS for 5 minutes.</div>
       </p>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Master Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>Master Trials may be hosted by a Sith Lord+ and consist of:</b><br>
-        Recite the Sith Code, with no mistakes.<br>
-        Answer 7 Lore Questions, may get 2 wrong.<br>
-        Answer 7 IP Questions, may get 2 wrong.<br>
-        Duel the host 10 times.<br>
-        <b>Upon the event completion and them being ranked and recorded. Announce KOS for 8 minutes.</b><br>
-        <i>Host has complete authority to pass or fail attendees based on combat or how the attendee acts during the
-          trial.</i>
+        <b>Requirement: Sith Overseer rank. Hosted by Sith Lord+.</b>
+        • Recite the Sith Code with zero mistakes.<br>
+        • Answer 7 Lore Questions (2 mistakes allowed).<br>
+        • Answer 7 IP Questions (2 mistakes allowed).<br>
+        • Duel the host 10 times.<br>
+        <div class="kos-notice">POST-TRIAL: Announce KOS for 8 minutes.</div>
       </p>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Lord Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>Lord Trials may be hosted by a Darth+ and consist of:</b><br>
-        Recite the Sith Code, with no mistakes.<br>
-        Answer 9 Lore Questions, may get 1 wrong.<br>
-        Answer 9 IP Questions, may get 1 wrong.<br>
-        Duel the host 15 times.<br>
-        <b>Upon the event completion and them being ranked and recorded. Announce KOS for 10 minutes.</b><br>
-        <i>Host has complete authority to pass or fail attendees based on combat or how the attendee acts during the
-          trial.</i>
+        <b>Requirement: Sith Master rank. Hosted by Darth+.</b>
+        • Recite the Sith Code with zero mistakes.<br>
+        • Answer 9 Lore Questions (1 mistake allowed).<br>
+        • Answer 9 IP Questions (1 mistake allowed).<br>
+        • Duel the host 15 times.<br>
+        <div class="kos-notice">POST-TRIAL: Announce KOS for 10 minutes.</div>
       </p>
     </section>
-    <p></p>
-    <p></p>
-    <section>
+
+    <section class="glass-panel">
       <h2 class="rank">Darth Trial</h2>
-      <p></p>
       <p class="rankdesc">
-        <b>To become a Darth, you must request to be voted to the rank and gain 2/3 votes by the Dark Council+. The
-          trial consists of:</b><br>
-        Recite the Sith Code, with no mistakes.<br>
-        Answer 10 Lore Questions, may get none wrong.<br>
-        Answer 10 IP Questions, may get none wrong.<br>
-        Duel the host 20 times.<br>
-        <b>Upon the event completion and them being ranked and recorded. Announce KOS for 15 minutes.</b><br>
-        <i>Host has complete authority to pass or fail attendees based on combat or how the attendee acts during the
-          trial.</i>
+        <b>Requirement: Request vote; must gain 2/3 majority from Dark Council+.</b>
+        • Recite the Sith Code with zero mistakes.<br>
+        • Answer 10 Lore Questions (Zero mistakes allowed).<br>
+        • Answer 10 IP Questions (Zero mistakes allowed).<br>
+        • Duel the host 20 times.<br>
+        <div class="kos-notice">POST-TRIAL: Announce KOS for 15 minutes.</div>
       </p>
     </section>
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Hosting
-        Guide</a>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Hosting Guide
+      </a>
     </div>
   </main>
+
+  <script type="module" src="../../../script.js"></script>
 </body>
+
+</html>
