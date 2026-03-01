@@ -3,53 +3,129 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dark Honor Guard - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../media/TSB_DHG.png">
   <link href="../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .division-page-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ff6b6b;
+      border-left: 3px solid #ff3333;
+      padding-left: 20px;
+      margin: 30px auto;
+      max-width: 80%;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+
+    .external-link-card {
+      display: inline-block;
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .external-link-card:hover {
+      background: rgba(255, 0, 0, 0.3);
+      border-color: #ff3333;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../media/DHG_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Divisions';
-    const FinalPath = '../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <p></p>
-    <p></p>
-    <h1 class="title">〔𝐃𝐚𝐫𝐤 𝐇𝐨𝐧𝐨𝐫 𝐆𝐮𝐚𝐫𝐝〕</h1>
+  <main class="division-page-container">
+    <h1 class="title">Dark Honor Guard</h1>
 
-    <p></p>
-    <section>
+    <section class="glass-panel">
       <p class="description">
-        The Dark Honor Guard, was a force of elite warriors who served the Sith Emperor of the reconstituted Sith Empire
-        as his personal protectors and enforcers.<br><br>
-        "𝙒𝙚 𝙖𝙧𝙚 𝙩𝙝𝙚 𝙀𝙢𝙥𝙚𝙧𝙤𝙧'𝙨 𝙂𝙪𝙖𝙧𝙙. 𝙒𝙚 𝙥𝙧𝙤𝙩𝙚𝙘𝙩 𝙝𝙞𝙢. 𝙆𝙞𝙡𝙡 𝙛𝙤𝙧 𝙝𝙞𝙢. 𝘿𝙞𝙚 𝙛𝙤𝙧 𝙝𝙞𝙢." ―𝙇𝙖𝙨𝙨𝙞𝙘𝙖𝙧
+        The Dark Honor Guard is a force of elite warriors who serve the Sith Emperor of the reconstituted Sith Empire 
+        as his personal protectors and enforcers. Silent, disciplined, and lethally efficient, they are the 
+        final line of defense for the Imperial Throne.
       </p>
-    </section>
-    <section class="grid">
-      <a href="https://www.roblox.com/groups/7440444/TSB-Dark-Honor-Guards#!/about" class="card">
-        <h2>Group Link</h2>
-      </a>
+
+      <div class="quote">
+        "We are the Emperor's Guard. We protect him. Kill for him. Die for him." <br>
+        <span style="color: #aaa; font-size: 0.9rem; text-transform: uppercase;">— Lassicar</span>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <a href="https://www.roblox.com/groups/7440444/TSB-Dark-Honor-Guards#!/about" class="external-link-card">
+          Access Group Records
+        </a>
+      </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to
-        Divisions Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Divisions
+      </a>
     </div>
   </main>
 
-  <script type="module" src="script.js"></script>
+  <script type="module" src="../../script.js"></script>
 </body>
 
 </html>
-
