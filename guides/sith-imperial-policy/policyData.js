@@ -48,8 +48,10 @@ export const policyData = [
     title: "ARTICLE VI — FORCE REGULATION",
     sections: [
       { name: "Section 6.01 — Duel Restriction", text: "The Force shall not be used during duels." },
-      { name: "Section 6.02 — Authorized Force Use", text: "The Force may be used against hostile Force users until neutralized. Force abuse shall be reported to Powerbase+ and punished accordingly." }
-    ]
+      { name: "Section 6.02 — Authorized Force Use", text: "The Force may be used against hostile Force users until neutralized. Force abuse shall be reported to Powerbase+ and punished accordingly." },
+      { name: "Section 6.03 — Force Abuse Reporting", text: "Any member observing Force abuse must report it to Powerbase+ within 24 hours of observation." },
+      { name: "Section 6.04 — Force Shock", text: "Force Shock is a ability only to be used by members going after a target who broke the law and is running from being arrested. IT IS TO NEVER BE USED OUTSIDE OF THAT REASON" }
+]
   },
   {
     id: "article7",
