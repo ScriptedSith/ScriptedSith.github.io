@@ -83,14 +83,15 @@ export const policyData = [
     title: "ARTICLE X — INSUBORDINATION",
     sections: [
       { name: "General Command", text: "All Brotherhood members are to listen and follow any and all commands given to them by a High Rank. A High Rank’s command may be overruled if someone Higher than them, or your divisional overseer, gives another command." },
-      { name: "Section 10.01 — Ignoring Commands", text: "A member may disregard a command if it: <br>1. Breaks IP laws.<br>2. Is harmful to others/yourself.<br>3. Breaks a set rule within your division." }
+      { name: "Section 10.01 — Ignoring Commands", text: "A member may disregard a command if it: <br>1. Breaks IP laws.<br>2. Causes damage physically to others/yourself.<br>3. Breaks a set rule within your division." }
     ]
   },
   {
     id: "article11",
-    title: "ARTICLE XI — SITH REGULATIONS",
+    title: "ARTICLE XI — SITH CONDUCT & APPEARANCE",
     sections: [
-      { name: "Conduct & Appearance", text: "• Grammar/Maturity required for all above Sith Tyro.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease' (if no higher rank is nearby).<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off mats unless dueling." }
+      { name: "Section 11.01 — General Conduct", text: "• Grammar/Maturity required for all above Sith Hopeful.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease.' Lower ranks may only be 'at ease' if no higher-ranked individual is within 50 studs and within direct line of sight.<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off mats unless dueling." },
+      { name: "Section 11.02 — Appearance", text: "Hopeful+ must show decency at all times, this would mean no trolling, being immature, overly disruptive. Anything over Sith Tyro must use proper grammar and higher maturity to show and example to those lower ranked." }
     ]
   },
   {
@@ -121,7 +122,7 @@ export const policyData = [
     id: "article15",
     title: "ARTICLE XV — TERRITORY",
     sections: [
-      { name: "Section 15.01 — Restricted Areas", text: "Divisional Rooms (II/IQ only for law enforcement). II Room is strictly OFF LIMITS (except II, Powerbase, or Darth Jadus). DC Chambers require DC permission or Master presence for Apprentices. Hostile Spawn is restricted." },
+      { name: "Section 15.01 — Restricted Areas", text: "Divisional Rooms (II/IQ only for law enforcement). II Room is strictly OFF LIMITS (except II, Powerbase, or Darth Jadus). DC Chambers require DC permission or Their Master's presence for Apprentices. Hostile Spawn is restricted." },
       { name: "Subsection 15.01.A — Forbidden Entry", text: "Includes glitching camera through or glitching your way into restricted zones." }
     ]
   },
