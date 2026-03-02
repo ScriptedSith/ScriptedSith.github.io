@@ -102,130 +102,41 @@
   <main class="ranks-container">
     <h1 class="title">Hierarchy of Power</h1>
 
-    <section class="glass-panel">
-      <h2 class="subtitle">Low Ranks</h2>
-      
-      <div class="rank-item">
-        <h3 class="rank">Grotthu</h3>
-        <p class="rankdesc">Join the <a href="https://www.roblox.com/groups/7440419/The-Sith-Brotherhood#!/about">group</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Hopeful</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Acolyte</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Tyro</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-    </section>
-
-    <section class="glass-panel">
-      <h2 class="subtitle">Mid Ranks</h2>
-      
-      <div class="rank-item">
-        <h3 class="rank">Sith Initiate</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Apprentice / Adept</h3>
-        <p class="rankdesc">Apprentice: Secure a Master. <br> Adept: Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Marauder</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Eradicator</h3>
-        <p class="rankdesc">Attend a <a href="../hosting/events/">Promotional Event</a>.</p>
-      </div>
-    </section>
-
-    <section class="glass-panel">
-      <h2 class="subtitle">High Ranks</h2>
-      
-      <div class="rank-item">
-        <h3 class="rank">Sith Knight</h3>
-        <p class="rankdesc">Pass a <a href="../hosting/trials/">Knight Trial</a>.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Overseer</h3>
-        <p class="rankdesc">
-          Knight for 1 day. <br>
-          Host 3 <a href="../hosting/events/">Promotional Events</a>. <br>
-          Pass an <a href="../hosting/trials/">Overseer Trial</a>.
-        </p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Master</h3>
-        <p class="rankdesc">
-          Overseer for 3 days. <br>
-          Host 5 <a href="../hosting/events/">Promotional Events</a>. <br>
-          Pass a <a href="../hosting/trials/">Master Trial</a>.
-        </p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Lord</h3>
-        <p class="rankdesc">
-          Master for 5 days. <br>
-          Host 7 <a href="../hosting/events/">Promotional Events</a>. <br>
-          Pass a <a href="../hosting/trials/">Lord Trial</a>.
-        </p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Darth</h3>
-        <p class="rankdesc">
-          Lord for 7 days. <br>
-          Host 10 <a href="../hosting/events/">Promotional Events</a>. <br>
-          Council nomination and approval. <br>
-          Pass a <a href="../hosting/trials/">Darth Trial</a>.
-        </p>
-      </div>
-    </section>
-
-    <section class="glass-panel">
-      <h2 class="subtitle">High Command</h2>
-      
-      <div class="rank-item">
-        <h3 class="rank">Dark Council</h3>
-        <p class="rankdesc">Kaggath a Dark Council Member OR be voted in by 2/3 of DC+.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">The Emperor's Powerbase</h3>
-        <p class="rankdesc">Chosen by the Emperor or The Dark Side.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">Sith Emperor</h3>
-        <p class="rankdesc">Chosen by The Dark Side.</p>
-      </div>
-
-      <div class="rank-item">
-        <h3 class="rank">The Dark Side</h3>
-        <p class="rankdesc" style="font-style: italic;">Unobtainable.</p>
-      </div>
-    </section>
+    <div id="ranks-display"></div>
 
     <div style="margin-top: 3rem; text-align: center;">
-      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+      <a href="../"
+        style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
         ← Return to Guides
       </a>
     </div>
   </main>
+  <script>
+    const display = document.getElementById('ranks-display');
+    import { RANK_DATA } from './ranks-data.js';
+
+    // Loop through each category (Low, Mid, High, etc)
+    RANK_DATA.forEach(section => {
+      const glassPanel = document.createElement('section');
+      glassPanel.className = 'glass-panel';
+
+      // Build the category header
+      let sectionHTML = `<h2 class="subtitle">${section.category}</h2>`;
+
+      // Build each rank item within that category
+      section.ranks.forEach(item => {
+        sectionHTML += `
+                <div class="rank-item">
+                    <h3 class="rank">${item.name}</h3>
+                    <p class="rankdesc">${item.desc}</p>
+                </div>
+            `;
+      });
+
+      glassPanel.innerHTML = sectionHTML;
+      display.appendChild(glassPanel);
+    });
+  </script>
 
   <script type="module" src="../../script.js"></script>
 </body>
