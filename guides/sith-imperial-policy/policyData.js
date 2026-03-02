@@ -23,7 +23,7 @@ export const policyData = [
     sections: [
       { name: "Section 3.01 — Admin Privileges", text: "Administrative privileges are restricted to Divisional High Ranks, Sith Overseer+, and Dark Council+ (DC+)." },
       { name: "Section 3.02 — Unauthorized Access", text: "Unauthorized possession or distribution of administrative privileges shall result in permanent removal of admin rights and demotion to Acolyte." },
-      { name: "Section 3.03 — Conduct of Admin", text: "Admin commands shall not be used upon higher-ranked individuals without permission. All instances of admin abuse shall be reported to High Command." }
+      { name: "Section 3.03 — Conduct of Admin", text: "Admin commands shall not be used upon higher or equal ranked  individuals without permission. All instances of admin abuse shall be reported to High Command." }
     ]
   },
   {
