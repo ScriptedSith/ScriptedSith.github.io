@@ -116,36 +116,46 @@
     <section class="glass-panel">
       <h2 class="section-header">Masters of the Dark Side</h2>
       <p class="description">
-        Welcome to the People Section of the Sith Holocron. Explore the legacies of influential figures who have
-        shaped the Sith across the ages. From ancient kings to cosmic entities, their triumphs and downfalls
+        Welcome to the People Section of the Sith Holocron. Explore the legacies of influential figures who have 
+        shaped the Sith across the ages. From ancient kings to cosmic entities, their triumphs and downfalls 
         offer powerful lessons for any who walk the path of the Dark Side.
       </p>
     </section>
 
     <section class="glass-panel">
-      <div class="grid" id="people-grid">
+      <div class="grid">
+        <a href="KingAdas/" class="card">
+          <h2>King Adas</h2>
+        </a>
+
+        <a href="MarkaRagnos/" class="card">
+          <h2>Marka Ragnos</h2>
+        </a>
+
+        <a href="NagaSadow/" class="card">
+          <h2>Naga Sadow</h2>
+        </a>
+
+        <a href="TulakHord/" class="card">
+          <h2>Tulak Hord</h2>
+        </a>
+
+        <a href="DarthNihilus/" class="card">
+          <h2>Darth Nihilus</h2>
+        </a>
+
+        <a href="AjuntaPall/" class="card">
+          <h2>Ajunta Pall</h2>
+        </a>
+
+        <a href="DarthVitiate/" class="card">
+          <h2>Darth Vitiate</h2>
+        </a>
       </div>
     </section>
 
-    <script type="module">
-      // Import the data
-      import { HOLOCRON_PEOPLE } from '../../holocron-data.js';
-
-      const grid = document.getElementById('people-grid');
-
-      // Loop through the data and create buttons
-      HOLOCRON_PEOPLE.forEach(person => {
-        const card = document.createElement('a');
-        card.href = `${person.path}/`;
-        card.className = 'card';
-        card.innerHTML = `<h2>${person.name}</h2>`;
-        grid.appendChild(card);
-      });
-    </script>
-
     <div style="margin-top: 3rem; text-align: center;">
-      <a href="../"
-        style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
         ← Return to Holocron
       </a>
     </div>
