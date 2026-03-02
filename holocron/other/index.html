@@ -10,7 +10,7 @@
 
   <style>
     .holocron-container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 120px auto 60px;
       padding: 0 20px;
     }
@@ -42,6 +42,44 @@
       line-height: 1.8;
       color: #eee;
       font-size: 1.1rem;
+    }
+
+    /* Automated Grid Styling */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card:hover {
+      background: rgba(255, 0, 0, 0.2);
+      border-color: #ff3333;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: #ff3333;
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+      padding-bottom: 10px;
     }
 
     /* WIP / Forbidden Lore Styling */
@@ -100,18 +138,18 @@
       <h2 class="section-header">Forbidden Knowledge</h2>
       <p class="description">
         Welcome to the Other Section of the Sith Holocron. This section houses knowledge that defies easy 
-        classification—secrets, anomalies, and forbidden lore that lie beyond the boundaries of conventional categories. 
-        Here you may find lost rituals, obscure teachings, and the remnants of truths too dangerous to fit elsewhere. 
-        Proceed with caution; power often hides in the unexpected.
+        classification—secrets, anomalies, and forbidden lore that lie beyond the boundaries of conventional categories.
       </p>
     </section>
 
-    <section class="glass-panel">
-      <div class="mystery-box">
-        <p class="status-text">Seal of the Dark Council Intact</p>
-        <p style="color: #888; margin-top: 15px; font-style: italic;">
-          [ These archives are currently shrouded. Further clearance is required to unveil the hidden truths. ]
-        </p>
+    <section class="glass-panel" id="main-content-area">
+      <div id="other-display">
+        <div class="mystery-box">
+          <p class="status-text">Seal of the Dark Council Intact</p>
+          <p style="color: #888; margin-top: 15px; font-style: italic;">
+            [ These archives are currently shrouded. Further clearance is required to unveil the hidden truths. ]
+          </p>
+        </div>
       </div>
     </section>
 
@@ -122,7 +160,28 @@
     </div>
   </main>
 
+  <script>
+    // Automated Grid Generation for "Other"
+    const displayArea = document.getElementById('other-display');
+    const otherItems = window.HOLOCRON_DATA?.other || [];
+
+    if (otherItems.length > 0) {
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+      
+      otherItems.forEach(item => {
+        const card = document.createElement('a');
+        card.href = item.path + "/";
+        card.className = "card";
+        card.innerHTML = `<h2>${item.name}</h2>`;
+        grid.appendChild(card);
+      });
+
+      displayArea.innerHTML = '';
+      displayArea.appendChild(grid);
+    }
+  </script>
+
   <script type="module" src="../../script.js"></script>
 </body>
-
 </html>
