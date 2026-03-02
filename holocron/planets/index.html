@@ -82,6 +82,7 @@
 
   <div id="navbar-container"></div>
 
+  <script src="../../holocron-data.js"></script>
   <script src="../../navbar.js"></script>
   <script>
     const ACTIVE = 'Holocron';
@@ -95,24 +96,38 @@
     <section class="glass-panel">
       <h2 class="section-header">Worlds of the Dark Side</h2>
       <p class="description">
-        Welcome to the Planet Section of the Sith Holocron. Here you will discover vital information about the key 
-        worlds tied to the Sith Brotherhood. From ancient strongholds to battlegrounds steeped in dark power, these 
-        planets form the crucible of our legacy. Understanding these places is essential to grasping the full might 
+        Welcome to the Planet Section of the Sith Holocron. Here you will discover vital information about the key
+        worlds tied to the Sith Brotherhood. From ancient strongholds to battlegrounds steeped in dark power, these
+        planets form the crucible of our legacy. Understanding these places is essential to grasping the full might
         and history of the Sith.
       </p>
     </section>
 
     <section class="glass-panel">
-      <div class="archive-status">
-        <p class="status-text">Coordinates Locked: Encryption Active</p>
-        <p style="color: #777; margin-top: 10px; font-style: italic;">
-          [ Planetary data currently being synthesized. Access restricted to Dark Council clearance. ]
-        </p>
+      <div class="grid" id="planets-grid">
       </div>
     </section>
 
+    <script>
+      const grid = document.getElementById('planets-grid');
+      const planets = window.HOLOCRON_DATA.planets;
+
+      if (planets.length === 0) {
+        grid.innerHTML = `<p style="color: #aaa; font-style: italic; grid-column: 1/-1;"> Coordinates Locked: Encryption Active[ Planetary data currently being synthesized. Access restricted to Dark Council clearance. ]</p>`;
+      } else {
+        planets.forEach(planet => {
+          const card = document.createElement('a');
+          card.href = planet.path + "/";
+          card.className = "card";
+          card.innerHTML = `<h2>${planet.name}</h2>`;
+          grid.appendChild(card);
+        });
+      }
+    </script>
+
     <div style="margin-top: 3rem; text-align: center;">
-      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+      <a href="../"
+        style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
         ← Return to Holocron
       </a>
     </div>

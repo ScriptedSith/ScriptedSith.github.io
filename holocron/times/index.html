@@ -89,6 +89,7 @@
 
   <div id="navbar-container"></div>
 
+  <script src="../../holocron-data.js"></script>
   <script src="../../navbar.js"></script>
   <script>
     const ACTIVE = 'Holocron';
@@ -101,22 +102,26 @@
 
     <section class="glass-panel">
       <p class="description">
-        Welcome to the Section of Time. Here you will explore the pivotal eras, ancient conflicts, and dark milestones 
+        Welcome to the Section of Time. Here you will explore the pivotal eras, ancient conflicts, and dark milestones
         throughout Sith history that have led to our current dominion.
       </p>
     </section>
 
-    <section class="glass-panel">
-      <div class="grid">
-        <a href="HundredYearDarkness/" class="card">
-          <h2>The Hundred Year Darkness</h2>
-          <span style="color: #ff3333; font-size: 1.5rem;">&rarr;</span>
-        </a>
-        </div>
-    </section>
+    <script>
+      const grid = document.getElementById('times-grid'); // Ensure your div has this ID
+
+      window.HOLOCRON_DATA.times.forEach(planet => {
+        const card = document.createElement('a');
+        card.href = planet.path + "/";
+        card.className = "card";
+        card.innerHTML = `<h2>${planet.name}</h2>`;
+        grid.appendChild(card);
+      });
+    </script>
 
     <div style="margin-top: 3rem; text-align: center;">
-      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+      <a href="../"
+        style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
         ← Return to Holocron
       </a>
     </div>
