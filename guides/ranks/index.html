@@ -91,7 +91,7 @@
 <body class="page-background" style="background-image: url('../../media/MainGroup_LOGO.png');">
 
   <div id="navbar-container"></div>
-
+  <script src="../../ranks-data.js"></script>
   <script src="../../navbar.js"></script>
   <script>
     const ACTIVE = 'Guides';
@@ -113,29 +113,30 @@
   </main>
   <script>
     const display = document.getElementById('ranks-display');
-    import { RANK_DATA } from './ranks-data.js';
 
-    // Loop through each category (Low, Mid, High, etc)
-    RANK_DATA.forEach(section => {
-      const glassPanel = document.createElement('section');
-      glassPanel.className = 'glass-panel';
+    // Use window.RANK_DATA instead of importing
+    if (window.RANK_DATA) {
+      window.RANK_DATA.forEach(section => {
+        const glassPanel = document.createElement('section');
+        glassPanel.className = 'glass-panel';
 
-      // Build the category header
-      let sectionHTML = `<h2 class="subtitle">${section.category}</h2>`;
+        let sectionHTML = `<h2 class="subtitle">${section.category}</h2>`;
 
-      // Build each rank item within that category
-      section.ranks.forEach(item => {
-        sectionHTML += `
-                <div class="rank-item">
-                    <h3 class="rank">${item.name}</h3>
-                    <p class="rankdesc">${item.desc}</p>
-                </div>
-            `;
+        section.ranks.forEach(item => {
+          sectionHTML += `
+          <div class="rank-item">
+            <h3 class="rank">${item.name}</h3>
+            <p class="rankdesc">${item.desc}</p>
+          </div>
+        `;
+        });
+
+        glassPanel.innerHTML = sectionHTML;
+        display.appendChild(glassPanel);
       });
-
-      glassPanel.innerHTML = sectionHTML;
-      display.appendChild(glassPanel);
-    });
+    } else {
+      display.innerHTML = "<p style='color:white;'>Archive connection failed...</p>";
+    }
   </script>
 
   <script type="module" src="../../script.js"></script>
