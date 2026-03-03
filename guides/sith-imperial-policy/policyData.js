@@ -90,7 +90,7 @@ export const policyData = [
     id: "article11",
     title: "ARTICLE XI — SITH CONDUCT & APPEARANCE",
     sections: [
-      { name: "Section 11.01 — General Conduct", text: "• Grammar/Maturity required for all above Sith Hopeful.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease.' Lower ranks may only be 'at ease' if no higher-ranked individual is within 50 studs and within direct line of sight.<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off the mats if someone else is dueling on them." },
+      { name: "Section 11.01 — General Conduct", text: "• Grammar/Maturity required for all above Sith Hopeful.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease.' Lower ranks may only be 'at ease' if no higher-ranked individual is within 50 studs and within direct line of sight.<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off the mats unless dueling or someone else is dueling on them." },
       { name: "Section 11.02 — Appearance", text: "Hopeful+ must show decency at all times, this would mean no trolling, being immature, overly disruptive. Anything over Sith Tyro must use proper grammar and higher maturity to show and example to those lower ranked." }
     ]
   },
