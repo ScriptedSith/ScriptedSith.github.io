@@ -74,7 +74,7 @@ export const policyData = [
     id: "article9",
     title: "ARTICLE IX — MORPHS",
     sections: [
-      { name: "General Regulation", text: "Main group and divisional morphs MUST BE worn during Tryouts and Events. Customs CAN ONLY BE WORN outside of Tryouts and Events, unless PB+ says otherwise. The only people allowed to not wear a morph are PB+ (if in Sith attire). If in a division with on-duty/off-duty rules, you MUST maintain honor in both." },
+      { name: "General Regulation", text: "Official group or divisional morphs are mandatory during all tryouts and events. Custom morphs are strictly prohibited during these times unless explicitly authorized by a PB+. Sith attire is reserved exclusively for PB+ personnel. Members of divisions with duty-status regulations must uphold group standards and honor at all times, Unless off duty with permission from there division higher ups or PB+." },
       { name: "Section 9.01 — Divisional Enforcement", text: "Failure to maintain morph honor results in Overseer alerts. For non-divisional members, any HR online can handle it via screenshot. Punishments range from grammar jacks to hell jacks based on rank and cooperation." }
     ]
   },
