@@ -51,14 +51,6 @@ function createNavbar(ACTIVE = 'Home', rootPath = '', division = '') {
             <a href="${rootPath}guides/" class="nav-link${ACTIVE === 'Guides' ? ' active' : ''}">Guides</a>
             <div class="dropdown">
               <a href="${rootPath}guides/sith-imperial-policy/" class="dropdown-link">Sith Imperial Policy</a>
-              <div class="dropdown-item">
-                <a href="${rootPath}guides/hosting/" class="dropdown-link has-submenu">Hosting Guide</a>
-                <div class="sub-dropdown">
-                  <a href="${rootPath}guides/hosting/events/" class="sub-dropdown-link">Events</a>
-                  <a href="${rootPath}guides/hosting/trainings/" class="sub-dropdown-link">Trainings</a>
-                  <a href="${rootPath}guides/hosting/trials/" class="sub-dropdown-link">Trials</a>
-                </div>
-              </div>
               <a href="${rootPath}guides/ranks/" class="dropdown-link">Ranks</a>
               <a href="${rootPath}guides/commands-formations/" class="dropdown-link">Commands and Formations</a>
             </div>
