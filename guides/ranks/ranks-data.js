@@ -1,5 +1,5 @@
 // ranks-data.js
-window.RANK_DATA = [
+export const RANK_DATA = [
     {
         category: "Low Ranks",
         ranks: [
