@@ -84,7 +84,7 @@ window.RANK_DATA = [
             },
             {
                 name: "The Dark Side",
-                desc: '<span style="font-family: \'Georgia\', serif; color: #8b0000; font-style: italic; letter-spacing: 5px; text-shadow: 2px 2px 5px #000; font-weight: 900; text-transform: uppercase;">Unobtainable</span>'
+                desc: '<span style="font-family: \'Impact\', sans-serif; color: #fff; letter-spacing: 2px; text-shadow: 2px 0 #ff0000, -2px 0 #8b0000; text-transform: uppercase;">Unobtainable</span>'
             }
         ]
     }
