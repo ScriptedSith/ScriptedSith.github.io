@@ -47,9 +47,9 @@ export const policyData = [
     id: "article6",
     title: "ARTICLE VI — FORCE REGULATION",
     sections: [
-      { name: "Section 6.01 — Duel Restriction", text: "The Force shall not be used during duels." },
-      { name: "Section 6.02 — Authorized Force Use", text: "The Force may be used against hostile Force users until neutralized. Force abuse shall be reported to Powerbase+ and punished accordingly." },
-      { name: "Section 6.03 — Force Abuse Reporting", text: "Any member observing Force abuse must report it to Powerbase+ within 24 hours of observation." },
+      { name: "Section 6.01 — Duel Restriction", text: "The Force, regarding council+ force, gamepass or any other similar force will not be used during all fights." },
+      { name: "Section 6.02 — Authorized Force Use", text: "The Force may not be used for during combat situations. It can be used outside of combat for healing purposes, it can be used for detaining such as force shock but it is not to be used for harming any other person or used to stun the person completely." },
+      { name: "Section 6.03 — Force Abuse Reporting", text: "Any member observing Force abuse must report it to Imperial Intelligence within 24 hours of observation." },
       { name: "Section 6.04 — Force Shock", text: "Force Shock is a ability only to be used by members going after a target who broke the law and is running from being arrested. IT IS TO NEVER BE USED OUTSIDE OF THAT REASON" }
 ]
   },
@@ -90,7 +90,7 @@ export const policyData = [
     id: "article11",
     title: "ARTICLE XI — SITH CONDUCT & APPEARANCE",
     sections: [
-      { name: "Section 11.01 — General Conduct", text: "• Grammar/Maturity required for all above Sith Hopeful.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease.' Lower ranks may only be 'at ease' if no higher-ranked individual is within 50 studs and within direct line of sight.<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off mats unless dueling." },
+      { name: "Section 11.01 — General Conduct", text: "• Grammar/Maturity required for all above Sith Hopeful.<br>• Correct uniforms must be worn.<br>• Off-duty divisional members must wear designated Sith uniforms.<br>• Only Sith Master+, Divisional HRs, and DC+ may be 'at ease.' Lower ranks may only be 'at ease' if no higher-ranked individual is within 50 studs and within direct line of sight.<br>• No misshapen heads or obstructive t-shirts.<br>• Training spectating requires host permission (DC+ exempt).<br>• Sith stay off the mats if someone else is dueling on them." },
       { name: "Section 11.02 — Appearance", text: "Hopeful+ must show decency at all times, this would mean no trolling, being immature, overly disruptive. Anything over Sith Tyro must use proper grammar and higher maturity to show and example to those lower ranked." }
     ]
   },
