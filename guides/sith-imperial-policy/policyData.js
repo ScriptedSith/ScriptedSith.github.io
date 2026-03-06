@@ -99,7 +99,8 @@ export const policyData = [
     title: "ARTICLE XII — HIGH-RANK REGULATIONS",
     sections: [
       { name: "Section 12.01 — Malinger", text: "Feigning ill to escape duty is prohibited. Back-to-back inactivity notices will trigger investigations. Faking notices results in a permanent bar from HR ranks until deemed ready." },
-      { name: "Section 12.02 — Bias & Bribery", text: "Bribery (accepting value for ranks/currency) or bias (prejudice for/against groups) results in a permanent HR bar. Bias is defined as inclination or prejudice for or against one person or group." }
+      { name: "Section 12.02 — Bias & Bribery", text: "Bribery (accepting value for ranks/currency) or bias (prejudice for/against groups) results in a permanent HR bar. Bias is defined as inclination or prejudice for or against one person or group." },
+      { name: "Section 12.03 — Division Poaching", text: "No divisional high rank shall ever try to convince a person, who is already in a division, to join their division and leave their current one even with discharge." }
     ]
   },
   {
@@ -130,7 +131,7 @@ export const policyData = [
     id: "article16",
     title: "ARTICLE XVI — LOOPS & EXPLOITATION",
     sections: [
-      { name: "Loopholes", text: "Exploiting governance loopholes is unlawful. All discovered loopholes must be reported to the High Command immediately." }
+      { name: "Loopholes", text: "Exploiting any loopholes is unlawful. All discovered loopholes must be reported to the High Command immediately, or the Councilor who is incharge of law." }
     ]
   }
 ];
