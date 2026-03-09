@@ -1,117 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperial Archives | Media</title>
+    <link rel="icon" type="image/x-icon" href="../media/TSB.png">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
     <style>
-        body {
-            background-color: #0a0a0a;
+        body.page-background {
+            background-color: #000;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             color: #e0e0e0;
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 20px;
+            min-height: 100vh;
         }
 
-        .archive-header {
+        .archive-container {
+            max-width: 1200px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+
+        .title {
             text-align: center;
-            border-bottom: 2px solid #ff0000;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            font-size: 3.5rem;
+            color: white;
+            text-transform: uppercase;
         }
 
-        /* Filter System */
+        /* Filter Container (Standalone Glass) */
         .filter-container {
-            text-align: center;
-            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 40px;
             display: flex;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .filter-btn {
-            background: #1a1a1a;
+            background: rgba(255, 255, 255, 0.05);
             color: #ccc;
-            border: 1px solid #444;
-            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
             cursor: pointer;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            transition: all 0.3s;
+            font-size: 0.75rem;
+            transition: 0.3s;
         }
 
-        .filter-btn:hover, .filter-btn.active {
-            background: #ff0000;
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ff3333;
             color: white;
-            border-color: #ff0000;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+            border-color: #ff3333;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
         }
 
-        /* Grid */
+        /* The Grid */
         .media-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 25px;
         }
 
+        /* Individual Glass Cards */
         .image-card {
-            background: #151515;
-            border: 1px solid #333;
-            border-radius: 4px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            /* Matching your glass-panel */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 12px;
+            /* Padding creates the frame effect */
             overflow: hidden;
-            transition: all 0.3s ease;
             cursor: pointer;
-            display: block; /* For filtering logic */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         .image-card:hover {
-            transform: translateY(-5px);
-            border-color: #ff0000;
+            transform: translateY(-10px);
+            border-color: #ff3333;
+            box-shadow: 0 0 25px rgba(255, 51, 51, 0.2);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            border-radius: 8px;
         }
 
         .image-card img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
+            transition: 0.5s ease;
         }
 
-        .image-info { padding: 15px; }
-        .image-title { color: #ff0000; margin: 0; text-transform: uppercase; }
-        .tag-list { font-size: 0.7rem; color: #666; margin-top: 5px; text-transform: uppercase; }
+        .image-card:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
 
-        /* Modal */
+        /* Modal / Lightbox */
         #imageModal {
             display: none;
             position: fixed;
-            z-index: 1000;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center; align-items: center; flex-direction: column;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        #modalImg { max-width: 90%; max-height: 80%; border: 1px solid #ff0000; }
-        .close-modal { position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; cursor: pointer; }
+        #modalImg {
+            max-width: 90%;
+            max-height: 80%;
+            border: 1px solid #ff3333;
+            border-radius: 5px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #ff3333;
+            font-size: 50px;
+            cursor: pointer;
+        }
     </style>
 </head>
-<body>
 
-    <div class="archive-header">
-        <h1>IMPERIAL MEDIA ARCHIVES</h1>
-    </div>
+<body class="page-background" style="background-image: url('../media/MainGroup_LOGO.png');">
 
-    <div class="filter-container" id="filterBar">
-        <button class="filter-btn active" onclick="filterGallery('All', this)">All</button>
-    </div>
+    <div id="navbar-container"></div>
 
-    <div class="media-grid" id="gallery"></div>
+    <script src="../navbar.js"></script>
+    <script>
+        const ACTIVE = 'Images';
+        const FinalPath = '../';
+        document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
+    </script>
 
-    <div id="imageModal">
+    <main class="archive-container">
+        <h1 class="title">Media Archives</h1>
+
+        <div class="filter-container" id="filterBar">
+            <button class="filter-btn active" onclick="filterGallery('All', this)">All</button>
+        </div>
+
+        <div class="media-grid" id="gallery"></div>
+    </main>
+
+    <div id="imageModal" onclick="closeModalOutside(event)">
         <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img id="modalImg">
-        <div id="modalCaption" style="color:white; margin-top:15px;"></div>
+        <img id="modalImg" onclick="event.stopPropagation()">
+        <div id="modalCaption" onclick="event.stopPropagation()"
+            style="color:white; margin-top:20px; text-transform: uppercase; letter-spacing: 2px; text-align: center; padding: 0 20px;">
+        </div>
     </div>
 
     <script src="medias.js"></script>
@@ -127,17 +193,16 @@
         function renderGallery(list) {
             gallery.innerHTML = '';
             list.forEach(item => {
+                const cleanDesc = item.Description === "Add description here" ? "" : item.Description;
+
                 const card = document.createElement('div');
                 card.className = 'image-card';
                 card.innerHTML = `
-                    <img src="${item.Source}" alt="${item.title}">
-                    <div class="image-info">
-                        <h3 class="image-title">${item.title}</h3>
-                        <p style="font-size:0.85rem; color:#aaa; margin:5px 0;">${item.Description}</p>
-                        <div class="tag-list">${item.tags.join(' • ')}</div>
+                    <div class="image-wrapper">
+                        <img src="${item.Source}" alt="Archive Entry">
                     </div>
                 `;
-                card.onclick = () => openModal(item);
+                card.onclick = () => openModal(item, cleanDesc);
                 gallery.appendChild(card);
             });
         }
@@ -145,7 +210,6 @@
         function generateFilterButtons() {
             const allTags = new Set();
             mediaList.forEach(item => item.tags.forEach(tag => allTags.add(tag)));
-            
             allTags.forEach(tag => {
                 const btn = document.createElement('button');
                 btn.className = 'filter-btn';
@@ -156,30 +220,46 @@
         }
 
         function filterGallery(tag, btn) {
-            // UI Update
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            const filtered = (tag === 'All') ? mediaList : mediaList.filter(item => item.tags.includes(tag));
+            renderGallery(filtered);
+        }
 
-            // Logic
-            if (tag === 'All') {
-                renderGallery(mediaList);
-            } else {
-                const filtered = mediaList.filter(item => item.tags.includes(tag));
-                renderGallery(filtered);
+        function openModal(item, desc) {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "flex";
+            document.getElementById('modalImg').src = item.Source;
+            document.getElementById('modalCaption').innerHTML = `
+            <div style="color: #ccc; font-size: 1rem;">${desc}</div>
+            `;
+            // Lock scroll when modal is open (optional but recommended)
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function specifically for the "X" button
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        // Function to handle clicking the background
+        function closeModalOutside(event) {
+            const modal = document.getElementById('imageModal');
+            // If the click was on the modal container itself (the dark backdrop) 
+            // and not the image or text, close it.
+            if (event.target === modal) {
+                closeModal();
             }
         }
 
-        function openModal(item) {
-            document.getElementById('imageModal').style.display = "flex";
-            document.getElementById('modalImg').src = item.Source;
-            document.getElementById('modalCaption').textContent = item.title;
-        }
+        // Close on Escape key as a bonus for desktop users
+        window.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
 
-        function closeModal() {
-            document.getElementById('imageModal').style.display = "none";
-        }
-
-        init();
+        window.onload = init;
     </script>
 </body>
+
 </html>
