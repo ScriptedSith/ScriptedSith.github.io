@@ -97,6 +97,7 @@ function createNavbar(ACTIVE = 'Home', rootPath = '', division = '') {
              </div>
           </li>
           <li class="nav-item"><a href="${rootPath}links/" class="nav-link${ACTIVE === 'Links' ? ' active' : ''}">Links</a></li>
+          <li class="nav-item"><a href="${rootPath}images/" class="nav-link${ACTIVE === 'Images' ? ' active' : ''}">Images</a></li>
         </ul>
       </div>
     </nav>
