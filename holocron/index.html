@@ -3,71 +3,149 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Holocron - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../media/TSB.png">
   <link href="../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .holocron-container {
+      max-width: 1100px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    /* Grid for Holocron Categories */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      background: rgba(255, 0, 0, 0.15);
+      border-color: #ff3333;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: #ff3333;
+      margin: 0 0 10px 0;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../media/MainGroup_LOGO.png');">
 
-  <!-- Navigation Bar -->
   <div id="navbar-container"></div>
 
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Holocron';
-    const FinalPath = '../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Holocron</h1>
+  <main class="holocron-container">
+    <h1 class="title">The Holocron</h1>
 
-    <section>
-      <h2>Brotherhood Holocron Storage</h2>
-      <p class="description">
-        Welcome to the comprehensive Holocron section of the Sith Brotherhood. Here you will find essential information
-        about the history of the sith. This history serves as the foundation for all Sith.
+    <section class="glass-panel">
+      <h2 style="color: #ff3333; border-bottom: 1px solid #444; padding-bottom: 10px; margin-top: 0;">Brotherhood Archive Storage</h2>
+      <p style="font-size: 1.1rem; line-height: 1.7; color: #ddd;">
+        Welcome to the comprehensive Holocron section of the Sith Brotherhood. Within these digital crystals lies the 
+        recorded history of the Sith and the wider galaxy. This knowledge serves as the foundation for every member 
+        walking the path of the Dark Side.
       </p>
     </section>
-    <section class="grid">
-      <a href="planets/" class="card">
-        <h2>Planets &rarr;</h2>
-        <p>Read all about the different planets in the Star Wars universe.</p>
-      </a>
 
-      <a href="battles/" class="card">
-        <h2>Battles &rarr;</h2>
-        <p>Read about all the major battles in the Star Wars universe.</p>
-      </a>
+    <section class="glass-panel">
+      <div class="grid">
+        <a href="planets/" class="card">
+          <h2>Planets &rarr;</h2>
+          <p>Explore the worlds of the Star Wars universe, from the core to the outer rim.</p>
+        </a>
 
-      <a href="weapons/" class="card">
-        <h2>Weapons &rarr;</h2>
-        <p>Read about famous weapons in the Star Wars universe.</p>
-      </a>
+        <a href="battles/" class="card">
+          <h2>Battles &rarr;</h2>
+          <p>Study the major conflicts and tactical shifts that shaped galactic history.</p>
+        </a>
 
-      <a href="people/" class="card">
-        <h2>People &rarr;</h2>
-        <p>Read about famous people in the Star Wars universe.</p>
-      </a>
+        <a href="weapons/" class="card">
+          <h2>Weapons &rarr;</h2>
+          <p>Examine the legendary armaments and technology of the Sith and Jedi.</p>
+        </a>
 
-      <a href="times/" class="card">
-        <h2>Time &rarr;</h2>
-        <p>Read about import sections of time in Star Wars.</p>
-      </a>
+        <a href="people/" class="card">
+          <h2>People &rarr;</h2>
+          <p>Read about the masters, villains, and icons of the Star Wars universe.</p>
+        </a>
 
-      <a href="other/" class="card">
-        <h2>Other &rarr;</h2>
-        <p>Read about other important things from Star Wars.</p>
-      </a>
+        <a href="times/" class="card">
+          <h2>Time &rarr;</h2>
+          <p>A chronological breakdown of important eras and historical milestones.</p>
+        </a>
+
+        <a href="other/" class="card">
+          <h2>Other &rarr;</h2>
+          <p>Miscellaneous artifacts, philosophies, and galactic secrets.</p>
+        </a>
+      </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
-        Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Main Page
+      </a>
     </div>
   </main>
 

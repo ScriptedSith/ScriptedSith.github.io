@@ -3,57 +3,184 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divisions - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../media/TSB.png">
   <link href="../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .divisions-container {
+      max-width: 1100px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+    }
+
+    .section-header {
+      color: #ff3333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .description {
+      line-height: 1.8;
+      color: #eee;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* Divisions Grid */
+    .grid-divisions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+      justify-items: center;
+    }
+
+    .div-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      display: block;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .div-card img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      filter: grayscale(0.3) drop-shadow(0 0 5px rgba(0,0,0,0.5));
+      transition: all 0.3s ease;
+    }
+
+    /* Individual Division Color Styling based on style.css */
+    
+    /* DHG - Deep Red (#7d0000) */
+    .card-dhg:hover {
+      background: rgba(125, 0, 0, 0.15);
+      border-color: #7d0000;
+      box-shadow: 0 0 20px rgba(125, 0, 0, 0.3);
+      transform: translateY(-10px);
+    }
+
+    /* IQ - Magenta (#ff00ff) */
+    .card-iq:hover {
+      background: rgba(255, 0, 255, 0.1);
+      border-color: #ff00ff;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+      transform: translateY(-10px);
+    }
+
+    /* II - Cyan (#00ffff) */
+    .card-ii:hover {
+      background: rgba(0, 255, 255, 0.1);
+      border-color: #00ffff;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      transform: translateY(-10px);
+    }
+
+    /* REV - White (#ffffff) */
+    .card-rev:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+      transform: translateY(-10px);
+    }
+
+    /* DM - Yellow (#ffff00) */
+    .card-dm:hover {
+      background: rgba(255, 255, 0, 0.1);
+      border-color: #ffff00;
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
+      transform: translateY(-10px);
+    }
+
+    .div-card:hover img {
+      filter: grayscale(0) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+      transform: scale(1.05);
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../navbar.js"></script>
   <script>
     const ACTIVE = 'Divisions';
-    const FinalPath = '../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <h1 class="title">Divisions</h1>
-    <section>
+  <main class="divisions-container">
+    <h1 class="title">Imperial Sectors</h1>
+
+    <section class="glass-panel">
+      <h2 class="section-header">Specialized Branches</h2>
       <p class="description">
-        Welcome to the comprehensive guide section of the Sith Brotherhood. Here you will find essential information
-        about our policies, hosting procedures, ranking system, and tactical formations. These guides serve as the
-        foundation for all Brotherhood operations and activities.
+        The Sith Brotherhood is composed of elite sub-factions, each serving a vital role in the preservation 
+        of our Empire. Select a division to view their purpose and entry requirements.
       </p>
-    </section>
-    <section>
-      <div class="grid2">
-        <a href="dhg/" class="cardDHG">
+
+      <div class="grid-divisions">
+        <a href="dhg/" class="div-card card-dhg">
           <img src="../media/TSB_DHG.png" alt="Dark Honor Guard">
         </a>
-        <a href="iq/" class="cardIQ">
+        <a href="iq/" class="div-card card-iq">
           <img src="../media/TSB_IQ.png" alt="Inquisitors">
         </a>
-        <a href="ii/" class="cardII">
+        <a href="ii/" class="div-card card-ii">
           <img src="../media/TSB_II.png" alt="Imperial Intelligence">
         </a>
-        <a href="rev/" class="cardREV">
+        <a href="rev/" class="div-card card-rev">
           <img src="../media/TSB_REV.png" alt="Reavers">
         </a>
-        <a href="dm/" class="cardDM">
+        <a href="dm/" class="div-card card-dm">
           <img src="../media/TSB_DM.png" alt="Dread Masters">
         </a>
       </div>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Main
-        Page</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s; background: rgba(0,0,0,0.3);">
+        ← Return to Main Page
+      </a>
     </div>
   </main>
 

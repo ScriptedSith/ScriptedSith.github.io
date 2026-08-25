@@ -3,59 +3,98 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hundred Year Darkness - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../../media/TSB.png">
   <link href="../../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .lore-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 45px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .section-header {
+      color: #ff3333;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .description {
+      line-height: 1.9;
+      color: #eee;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Highlighting key figures/places */
+    b {
+      color: #ff6b6b;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Holocron';
-    const FinalPath = '../../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <p></p>
-    <p></p>
+  <main class="lore-container">
     <h1 class="title">The Hundred Year Darkness</h1>
 
-    <p></p>
-    <section>
+    <section class="glass-panel">
+      <h2 class="section-header">The Second Great Schism</h2>
       <p class="description">
-        The Hundred Year Darkness, more commonly known as the Second Great Schism, started when Jedi Knight practiced in
-        the uses of the Force. Through their practice, the Knights learned they could shape life itself and started to
-        experiment by creating new creatures and species. Other Jedis saw this usage of the Force as something that
-        could be abused. The sect of Jedis, those being Ajunta Pall, XoXaan, and Karness Muur, sought to convince others
-        about their quest for eternal life. They firmly believed that they were in the right, with their belief causing
-        conflict within the Order. The rogue Jedi were eventually exiled, as well as their teaching.<br><br>Retreating
-        from their homeworld of Tython, the exiled Jedis raised an army of dark side abominations to attack the other
-        Jedis. Despite these incarnations of the dark side, the Jedi were able to push back these animalistic army and
-        fight the Exiles directly. By the second half of the war, the Dark Jedi were outnumbered and had no chance of
-        winning. Though they refused to give up and pooled together their power to create a Leviathans and other
-        fearsome dark sided creatures. With this new army, the Dark Jedi used their creatures to suck the life essensce
-        of the Jedis into themselves. However, combined effort from the Jedi led to the Dark Jedi's last stand on
-        Corbos, with their eventual surrender on said planet.<br><br>The surviving Dark Jedis were stripped of their
-        weapons and armor and were promptly banished, in hopes that they would see the errors in their ways. On an
-        uncharted world, the Dark Jedi were surprised to find the humanoid Sith species on the planet. Hakagram Graush,
-        the ruler of the Sith, was surprised by their arrival, but welcomed them eventually after witnessing their
-        powers and technology. This would prove to be a fatal mistake as the Sith'ari under him as well as the Exiles
-        banishing Hakagram. Using their training, the Exiles boosted their status something akin to god and became the
-        rulers of the Sith people. As years passed, the Dark Jedi greatly accelerated the cultural development of the
-        Sith, with the term refering to not only the species, but to the fallen Jedi Masters.
+        The Hundred Year Darkness, more commonly known as the <b>Second Great Schism</b>, began when rogue Jedi Knights sought to master the art of shaping life itself. Experimenting with the creation of new species, these masters—<b>Ajunta Pall, XoXaan, and Karness Muur</b>—believed their quest for eternal life was the true path of the Force.
+        <br><br>
+        Exiled from the Jedi Order, they raised an army of dark side abominations to strike back at their former brothers. Though they unleashed terrifying <b>Leviathans</b> capable of consuming life essence, the Jedi eventually cornered the Exiles on <b>Corbos</b>. Following their surrender, the Dark Jedi were stripped of their weapons and banished into the unknown reaches of space.
+        <br><br>
+        On an uncharted world, the Exiles discovered the <b>Sith species</b>. After deposing the local ruler, <b>Hakagram Graush</b>, the Dark Jedi ascended to godhood among the natives. This era accelerated the cultural development of the Sith, merging the identity of the species with the title of the fallen Jedi Masters, marking the true birth of the Sith Empire.
       </p>
     </section>
 
-    <div style="margin-top: 3rem">
-      <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to Section of Time</a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to Section of Time
+      </a>
     </div>
   </main>
 
@@ -63,5 +102,3 @@
 </body>
 
 </html>
-
-

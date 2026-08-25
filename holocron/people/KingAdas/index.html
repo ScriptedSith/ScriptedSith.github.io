@@ -3,54 +3,101 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>King Adas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King Adas - The Sith Brotherhood</title>
   <link rel="icon" type="image/x-icon" href="../../../media/TSB.png">
   <link href="../../../style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .bio-container {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Glass Panel at 0.5 transparency */
+    .glass-panel {
+      background: rgba(0, 0, 0, 0.5) !important;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 45px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .section-header {
+      color: #ff3333;
+      border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .description {
+      line-height: 1.9;
+      color: #eee;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Highlighting key names/dates */
+    b {
+      color: #ff6b6b;
+    }
+
+    body.page-background {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-color: #000;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      font-size: 3.5rem;
+    }
+  </style>
 </head>
 
 <body class="page-background" style="background-image: url('../../../media/MainGroup_LOGO.png');">
-  <!-- Navigation Bar -->
+
   <div id="navbar-container"></div>
 
   <script src="../../../navbar.js"></script>
   <script>
-    // Set the active page - change this variable to set which nav item is active
     const ACTIVE = 'Holocron';
-    const FinalPath = '../../../'
-
-    // Insert the navbar into the page
-    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE,FinalPath);
+    const FinalPath = '../../../';
+    document.getElementById('navbar-container').innerHTML = createNavbar(ACTIVE, FinalPath);
   </script>
 
-  <main>
-    <p></p>
-    <p></p>
+  <main class="bio-container">
     <h1 class="title">King Adas</h1>
 
-    <p></p>
-    <section>
+    <section class="glass-panel">
+      <h2 class="section-header">The Original Sith'ari</h2>
       <p class="description">
-        Adas was king of Korriban and the Sith in a reign that lasted nearly three hundred years. He was large for his
-        species, his skin was unusually charcoal-colored, and he was raised as a chosen being from his
-        youth.<br /><br />Encasing himself in ebon armor, he wielded a massive battle ax and became a master of Sith
-        magic. Circa 28,000 BBY, Adas united the disparate nations of Korriban in a series of bloody conflicts,
-        eventually solidifying himself as the sole leader of his people.<br /><br />The Sith hailed Adas as the
-        Sith'ari, or "Overlord." The commonly held belief was that he was invincible and that his reign would be
-        eternal. Circa 27,700 BBY, Rakata from the Infinite Empire arrived on Korriban and taught Adas how to harness
-        the technology of holocrons. Adas created one of these devices but soon realized that the new arrivals were
-        attempting to conquer Korriban. He took his battle-ax to the aliens, and with his people at his side, drove them
-        off. In doing so, he lost his life.<br /><br />Adas's influence, however, would continue for many years
-        following his death. His holocron would later be granted to the Exiles in 6900 BBY, when the reign of the first
-        Jen'ari, or "Dark Lord" of the Sith began. It would later be lost on Ashas Ree during the Great Hyperspace War,
-        where it would later be found by fallen Jedi Knight Freedon Nadd, who used Adas's teachings to subjugate and
-        rule Onderon.
+        <b>Adas</b> was the king of Korriban and the Sith in a legendary reign that spanned nearly three hundred years. Distinguishable by his unusual charcoal-colored skin and massive stature, he was revered as a chosen being from his youth. 
+        <br><br>
+        Encased in ebon armor and wielding a colossal battle-axe, Adas became the undisputed master of <b>Sith magic</b>. Around <b>28,000 BBY</b>, he unified the warring nations of Korriban through a series of bloody conflicts, solidifying his role as the sole leader of his people. The Sith hailed him as the <b>Sith'ari</b>, believing his invincibility would ensure an eternal reign.
+        <br><br>
+        Circa <b>27,700 BBY</b>, the Rakata of the <b>Infinite Empire</b> arrived on Korriban. While they initially shared the technology of holocrons with Adas, he quickly realized their true intent was conquest. Adas led his people in a fierce counter-offensive to drive the invaders from Korriban, a victory that cost him his life but secured the freedom of the Sith.
+        <br><br>
+        His legacy endured through his <b>holocron</b>, which was eventually granted to the Dark Jedi Exiles in <b>6,900 BBY</b>. This artifact passed through the hands of historical titans, eventually being discovered by the fallen Jedi <b>Freedon Nadd</b>, who utilized Adas's ancient teachings to establish his own dark dominion over Onderon.
       </p>
     </section>
 
-    <div style="margin-top: 3rem">
-        <a href="../" style="color: #ff6b6b; font-size: 1.2rem; text-decoration: underline">← Return to People
-        </a>
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../" style="color: #ff6b6b; font-size: 1.1rem; text-decoration: none; border: 1px solid #ff6b6b; padding: 10px 20px; border-radius: 5px; transition: 0.3s;">
+        ← Return to People
+      </a>
     </div>
   </main>
 
@@ -58,5 +105,3 @@
 </body>
 
 </html>
-
-
